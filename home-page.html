@@ -1,0 +1,216 @@
+<!DOCTYPE html> 
+<html dir="rtl" id="page">
+
+<head>
+    <title>home page</title>
+    <!------------->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!--[if lt IE 9]>-->
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <!------------->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+    <link rel="stylesheet" type="text/css" href="css/home-page.css">
+
+</head>
+
+<body>
+
+
+    <!-- start main div -->
+    <div class="container-fluid" id="main-div">
+        <div id="navbar">
+            <div class="container" >
+            <div  id="dash-mneu"><span class="glyphicon-align-justify glyphicon"></span></div>
+                <div id="logo">
+                    <div style="color: #1b2946;">logo</div>
+                </div>
+                <div class="mobile-menu">
+                    <div id="btn-addAds">
+                        <a> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>أضف اعلان</a>
+                    </div>
+                    <div id="btn-singUp">
+                        <a><span class="glyphicon glyphicon-user" aria-hidden="true"></span>تسجيل الدخول</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="search-part" class="">
+            <h1>حافظ على البيئة وإكسب فلوس..</h1>
+            <p>هنا هتقدر تكسب تاني وتبيع وتشتري, لو عندك كمية من أي مواد قابلة لإعادة التدوير إعرضها هنا وهتلاقي إلي يشتريها منك.</p>
+            <div class="container" id="search-part-box">
+                <div id="search">
+                    <div id="btn-search" class="col-lg-2 col-md-2 col-sm-2 col-xs-12 elA">
+                        <a href="#" id="search-btn"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>أبحث</a>
+                    </div>
+
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 elB ">
+                        <select class="form-control" id="search-city" style="padding: 0px 12px">
+                            <option disabled selected>حدد المدينة</option>
+                            <option>الكل</option>
+                            <option>القاهرة</option>
+                            <option>الإسكندرية</option>
+                            <option>طنطا</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 elC ">
+                        <select class="form-control" id="search-some" style="padding: 0px 12px">
+                            <option disabled selected>حدد الفئة</option>
+                            <option>الكل</option>
+                            <option>بلاستك</option>
+                            <option>زجاج</option>
+                            <option>ورقيات</option>
+                            <option>كاوتش</option>
+                            <option>معادن</option>
+                        </select>
+                    </div>
+
+
+                </div>
+                <div id="price_filter">
+                    <div id="btn-filter" class="col-lg-2 col-md-2 col-sm-2 col-xs-12 elA">
+                        <a href="#" id="filter-btn"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span>تصفية</a>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 elB">
+                        <input type="number" class="form-control" placeholder="السعر إلى" id="price_to">
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 elC">
+                        <input type="number" class="form-control" placeholder="السعر من" id="price_from">
+                    </div>
+                </div>
+                <!--<div id="category">
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                        <img src="images/Untitled-1.png" id="icon-c"><a>بلاستيك</a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                        <img src="images/gllass.png" id="icon-c"><a>زجاج</a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                        <img src="images/paper2.png" id="icon-c"><a>ورقيات</a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                        <img src="images/wheeel.png" id="icon-c"><a>كاوتش</a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                        <img src="images/steel.png" id="icon-c"><a>معادن</a>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+
+        <div id="show-ads-part" class="container-fluid">
+            <div class="container">
+                <div id="ads-box">
+                    <div id="title">الإعلانات</div>
+                    <table>
+                        <tbody id="ads-table">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="footer" class="container-fluid" style="background-color: #121c31; width: 100%; height: 80px">
+            <div class="container" id="logo-container">
+
+                <a style="color: #defbff;
+                text-decoration: none;
+                cursor: pointer;
+                margin-top: 30px;
+                display: inline-block;
+                margin-left: 30px;">
+                    logo</a>
+
+                <a style="color: #defbff;
+                text-decoration: none;
+                cursor: pointer;
+                margin-top: 30px;
+                display: inline-block;
+                margin-left: 30px;">
+                    تواصل معنا</a>
+
+                <a style="color: #defbff;
+                text-decoration: none;
+                cursor: pointer;
+                margin-top: 30px;
+                display: inline-block;
+                margin-left: 30px;">
+                    الشروط و الأحكام</a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- modal of  update ads -->
+    <div class="modal fade" id="centralModalLg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+        <!-- Change class .modal-sm to change the size of the modal -->
+        <div class="modal-dialog modal-m" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <!-- modal content -->
+                    <span type="button" style="float: none" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true">&times;</span>
+
+
+                    <div id="modal_image_box">
+                        <img id="modal_ads_image">
+                    </div>
+
+
+                    <div id="modal_data_box">
+                        <p id="modal_ads_price"></p>
+                        <h4 id="modal_ads_name"></h4>
+                        
+                        <p id="modal_ads_category"></p>
+                        <p id="modal_ads_disc"></p>
+                        <hr>
+                        <div id="modal_buttom_data">
+                            <p id="modal_ads_poster_name"></p>
+                            <p id="modal_ads_location"></p>
+                            <p id="modal_ads_data"></p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal-footer">
+                    <div id="modal_phone"></div>
+                    <div id="modal_email"></div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- end modal -->
+    
+  
+
+    <script src="js/query.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/notify.min.js"></script>
+    <script src="js/script-homePage.js"></script>
+</body>
+
+</html>

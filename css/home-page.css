@@ -1,0 +1,544 @@
+/* defbff */
+* {
+    font-family: 'Cairo', 'HelveticaNeueLTArabic', 'Open Sans', sans-serif;
+}
+
+@font-face {
+    font-family: HelveticaNeueLTArabic;
+    src: url(../ARGFX.CO_HelveticaNeueLTArabic/HelveticaNeueLTArabic-Roman_0.TTF);
+}
+
+/* hide scroll side */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.glyphicon {
+    top: 2px;
+    left: 5px;
+    font-size: 17px;
+}
+
+body {}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#main-div {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/*   start navbar style */
+#logo {
+    float: right;
+    margin-top: 23px;
+    font-size: 20px;
+    max-width: 50%;
+}
+
+#navbar {
+    background-image: url(../images/nav-bg.png);
+    background-color: #defbff;
+    background-repeat: repeat-x;
+    background-position: 30% 12%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 350px;
+}
+
+#btn-singUp,
+#btn-addAds {
+    float: left;
+    margin-top: 23px;
+    font-size: 20px;
+    max-width: 50%;
+}
+
+#btn-addAds,
+#btn-singUp {
+    padding-right: 10px
+}
+
+#icon,
+#icon-f {
+    width: 17px;
+    height: 17px;
+    margin-left: 10px;
+}
+
+#btn-singUp a,
+#btn-addAds a,
+#btn-filter a,
+#btn-search a {
+    display: inline-block;
+    background-color: #3fc3c7;
+    text-decoration: none;
+    border: 0;
+    color: #1b2946;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#btn-search a {
+    width: 86px;
+    text-align: center;
+}
+
+#btn-addAds a {
+    background-color: #9dd22c;
+}
+
+/*   start search-part style */
+#search-part {
+    background-color: #9dd22c;
+    width: 100%;
+    height: auto;
+}
+
+#search-part h1 {
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 45px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: #1b2946;
+}
+
+#search-part p {
+    font-size: 18px;
+    text-align: center;
+    width: 49%;
+    margin: 0 auto;
+    color: #1b2946;
+}
+
+#search-part-box > div {
+    width: 100%;
+}
+
+#search-part-box {
+    padding-bottom: 55px;
+}
+
+#search {
+    margin-top: 50px;
+}
+
+#btn-search a,
+#btn-filter a {
+    float: left;
+}
+
+#price_filter {
+    float: right;
+    margin-top: 40px;
+    display: none;
+    flex-direction: row-reverse;
+}
+
+
+
+/* strat ads box part */
+#title {
+    color: #1b2946;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    float: right;
+    font-size: 25px;
+}
+
+table {
+    width: 100%;
+}
+
+table tr {
+    margin-bottom: 10px;
+}
+
+#ads-box {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.glyphicon-star {
+    z-index: 1;
+    display: inline-block;
+    position: absolute;
+    font-size: 27px;
+    top: 10px;
+    right: -75%;
+    color: lightgray;
+    -webkit-text-stroke: 1px #555;
+}
+
+.stared {
+    color: #3fc3c7;
+    z-index: 1;
+    display: inline-block;
+    position: absolute;
+    font-size: 32px;
+    top: 10px;
+    right: -75%;
+    -webkit-text-stroke: 1px #555;
+}
+
+.box {
+    color: #1b2946;
+    box-shadow: 0 3px 5px #EEEEEE;
+    width: 100%;
+    height: 180px;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+.box:hover {
+    box-shadow: 0 3px 10px 3px #cccccc;
+
+}
+
+/*.box:hover .image img {
+    transform: scale(1.2);
+
+}*/
+
+.box > div {
+    float: right;
+    clear: left;
+    height: 180px;
+    margin-bottom: 20px
+}
+
+.box .image {
+    width: 25%;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #eee;
+}
+
+.box .image img {
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    left: 50%;
+    top: 50%;
+    transition: all .5s ease-in-out;
+}
+
+.box .data {
+    width: 75%;
+}
+
+.box .data .ads-date,
+.box .data .ads-location {
+    font-weight: bold
+}
+
+.box .data h3 {
+    float: right;
+    margin: 13px 10px 0 0;
+    height: 30px;
+    overflow: hidden;
+    width: 50%;
+}
+
+.box .data h4 {
+    float: left;
+    clear: left;
+    margin: 13px 0 0 10px;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: sans-serif
+}
+
+.box .data p {
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.box .data p:first-of-type {
+    margin: 48px 10px 0 0;
+}
+
+/* end ads box part */
+
+/* start maodal style */
+.modal-body {
+    color: #1b2946;
+}
+
+.modal-body .close {
+    position: absolute;
+    top: -9px;
+    right: -11px;
+    z-index: 999999;
+    background-color: #000000;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 0px 5px;
+    width: 25px;
+    height: 26px;
+    color: white;
+    opacity: 1;
+}
+
+.modal-content {
+    margin-top: -8px;
+    margin-right: 1px;
+}
+
+#modal_image_box {
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+    background-color: #eee;
+    height: 300px;
+}
+
+#modal_image_box img {
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    left: 50%;
+    top: 50%;
+}
+
+#modal_ads_name {
+    float: right;
+    margin: 10px 0 0 0;
+    overflow: hidden;
+    width: 75%;
+    height: 40px;
+    font-weight: bold;
+
+}
+
+#modal_data_box :nth-child(3),
+#modal_data_box :nth-child(4) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#modal_buttom_data {
+    display: flex;
+}
+
+#modal_buttom_data p {
+    flex-wrap: wrap;
+    margin-left: 40px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.modal-footer {
+    display: flex
+}
+
+.modal-footer div {
+    flex-wrap: wrap;
+    width: 48%;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+#modal_ads_price {
+    float: left;
+    clear: left;
+    text-align: left;
+    height: 40px;
+    width: 25%;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: sans-serif;
+    background-color: #eaeaea;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 5px;
+    padding-right: 3px;
+}
+
+#modal_phone {
+    background-color: #3fc3c7;
+    color: #1b2946;
+
+}
+
+#modal_email {
+    background-color: #9dd22c;
+    color: #1b2946;
+}
+
+.glyphicon-earphone,
+.glyphicon-envelope {
+    top: 4px;
+    left: 5px;
+    margin-right: 15px;
+    font-size: 17px;
+    font-weight: bolder;
+    color: white;
+}
+
+#modal_data_box hr {
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+#dash-mneu{display: none}
+
+/* end maodal style */
+
+
+
+/* --------------responsive edit------------------- */
+
+/* for mobile */
+@media only screen and (max-width:767px) {
+
+    #btn-search a,
+    #btn-filter a {
+        width: 100%;
+        float: none
+    }
+
+    #search {
+        margin-right: 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #price_filter {
+        
+        flex-direction: column-reverse;
+    }
+
+    #search div,
+    #price_filter div {
+        margin-bottom: 10px
+    }
+
+    #navbar .container {
+        padding: 0
+    }
+
+    #logo {
+        width: 90%;
+        max-width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding-left: 15px;
+    }
+
+    #dash-mneu {
+        width: 10%;
+        margin-top: 18px;
+        float: right;
+        padding-right: 15px;
+        display: block;
+    }
+
+    #dash-mneu span {
+        background-color: #9dd22c;
+        margin-left: 10px;
+        font-size: 24px;
+        height: 51px;
+        color: #1b2946;
+        padding: 13px 14px 0px 14px;
+        border-radius: 5px;
+    }
+
+    .mobile-menu {
+        display: none;
+        height: 140px;
+        flex-flow: column;
+        background-color: #1b2946;
+        margin-top: 73px;
+    }
+
+    .mobile-menu div a {
+        width: 150px;
+        text-align: center;
+    }
+
+
+
+    .mobile-menu div {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* show ads part*/
+    .box {
+        height: 360px
+    }
+
+    .box .image {
+        width: 100%;
+        margin-bottom: 0;
+        border-top-left-radius: 5px;
+        border-bottom-right-radius: 0px;
+
+    }
+
+    .box .data {
+        width: 100%;
+    }
+
+    #ads-table tr td {
+        margin-bottom: 10px
+    }
+
+    #modal_ads_price,
+    #modal_ads_name {
+        width: 100%
+    }
+
+    #modal_buttom_data {
+        display: block;
+    }
+
+    .modal-footer {
+        display: block;
+    }
+
+    .modal-footer div {
+        width: 98%;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    #btn-search a,#btn-filter a {
+        width: 100%;
+        text-align: center;
+    }
+
+    #centralModalLg {
+        padding-top: 15px;
+    }
+}

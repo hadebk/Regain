@@ -1,0 +1,554 @@
+/* defbff */
+* {
+    font-family: 'Cairo', 'Open Sans', sans-serif;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+body {}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#main-div {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/*   start navbar style */
+#logo {
+    float: right;
+    margin-top: 23px;
+    font-size: 20px;
+    max-width: 50%;
+}
+
+#navbar {
+    background-color: #9dd22c;
+    width: 100%;
+    height: 80px;
+}
+
+#btn-singUp,
+#btn-addAds {
+    float: left;
+    margin-top: 23px;
+    font-size: 20px;
+    max-width: 50%;
+}
+
+#btn-singUp {
+    margin-left: 10px
+}
+
+#icon {
+    width: 17px;
+    height: 17px;
+    margin-left: 10px;
+    color: ;
+}
+
+.glyphicon {
+    top: 2px;
+    left: 5px;
+    font-size: 17px;
+}
+
+#btn-singUp a,
+#btn-addAds a,
+#btn-search a {
+    display: inline-block;
+    background-color: #3fc3c7;
+    text-decoration: none;
+    border: 0;
+    color: #1b2946;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#btn-addAds a {
+    background-color: #defbff;
+}
+
+#box-of-ads {
+    margin-bottom: 53px;
+    width: 100%;
+    height: 550px;
+    background-color: #e3e0e0;
+    overflow: auto;
+    border-radius: 5px;
+
+}
+
+#box-of-ads::-webkit-scrollbar {
+    /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+#box-titel ul {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 0;
+    float: right;
+    clear: right;
+}
+
+.nav-pills > li > a {
+    color: #1b2946;
+    font-size: 18px;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:hover {
+    background-color: #9dd22c;
+    color: #1b2946
+}
+
+#pills-home {}
+
+#pills-home table {
+    width: 98%;
+    margin: 0 1%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+#pills-home table thead tr td {
+    text-align: center;
+    padding: 10px 0;
+    width: 17%;
+    font-size: 16px;
+}
+
+#pills-home table tbody tr td {
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+#pills-home #table-head {
+    background-color: white;
+    color: #1b2946;
+}
+
+.btn-showAdsToUpdate,
+.btn-delet {
+    padding-left: 18px;
+    padding-right: 18px;
+    border: 0;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    text-transform: none;
+    letter-spacing: .25px;
+    min-width: 60px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: 35px;
+    background-color: #9dd22c;
+    color: #1b2946;
+}
+
+.ads_image {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+#pills-tab li{
+    border: 2px solid #eee;
+    border-radius: 5px;
+}
+
+#centralModalLg #btn-update,
+#centralModalLg .btn-secondary {
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-left: 10px;
+    font-size: 17px;
+    border: 0;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    text-transform: none;
+    letter-spacing: .25px;
+    min-width: 60px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: 35px;
+    background-color:#9dd22c;
+    color: #1b2946;
+}
+
+#pills-home .modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #9dd22c;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+#pills-home .modal-header h3 {
+    text-align: center;
+}
+
+#ads-box {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ads-box table {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.box {
+    color: #1b2946;
+    box-shadow: 0 3px 5px #ccc;
+    width: 100%;
+    height: 180px;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+.box:hover {
+    box-shadow: 0 3px 10px 3px #afadad;
+
+}
+
+.box > div {
+    float: right;
+    clear: left;
+    height: 180px;
+    margin-bottom: 20px
+}
+
+.box .image {
+    width: 25%;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #eee;
+}
+
+.box .image img {
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    left: 50%;
+    top: 50%;
+    transition: all .5s ease-in-out;
+}
+
+.box .data {
+    width: 75%;
+    background-color: white;
+}
+
+.box .data .right,
+.box .data .right p {
+    display: inline;
+}
+
+.box .data .btn-left {
+    float: left
+}
+
+.box .data .ads-date,
+.box .data .ads-location {
+    font-weight: bold
+}
+
+.box .data h3 {
+    float: right;
+    margin: 13px 10px 0 0;
+    height: 30px;
+    overflow: hidden;
+    width: 50%;
+}
+
+.box .data h4 {
+    float: left;
+    clear: left;
+    margin: 13px 0 0 10px;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: sans-serif
+}
+
+.box .data p {
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.box .data p:first-of-type {
+    margin: 48px 10px 0 0;
+}
+
+hr {
+    width: 95%;
+    margin-top: 45px;
+    margin-bottom: 10px;
+}
+
+.box .image .btn-delet-fav {
+    position: absolute;
+}
+
+.box .image .btn-delet-fav button {
+    padding-left: 18px;
+    padding-right: 18px;
+    border: 0;
+    border-bottom-left-radius: 5px;
+    text-transform: none;
+    letter-spacing: .25px;
+    min-width: 60px;
+    box-shadow: none;
+    height: 35px;
+    background-color: #9dd22c;
+    color: #1b2946;
+}
+
+/*********************************************************************************************************************/
+/*********************************************************************************************************************/
+/*********************************************************************************************************************/
+
+
+/* upload img button in modal */
+/* ------------------------------------- */
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+#img-box {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background-image: url(/images/plus.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
+    background-color: #e3e0e0;
+}
+
+#img-upload {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.input-group-btn {
+    display: inline;
+    margin-left: 10px;
+}
+
+/* start modal-delet-btn */
+
+#modal-delet-btn .modal-header {
+    background-color: #f2dede;
+    color: #d50000;
+    
+    border: 0;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: 0px;
+}
+#modal-delet-btn .modal-footer .delet-ads{
+    background-color: #ff5252;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff;
+    margin-left: 10px;
+    border: 0
+}
+
+/* end modal-delet-btn */
+
+/*   start footer style */
+#footer {
+    background-color: #121c31;
+    width: 100%;
+    height: 80px;
+}
+
+#footer a {
+    color: #defbff;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 30px;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+/***********************************************************************/
+/* start maodal style in fav */
+.modal-body {
+    color: #1b2946;
+}
+
+.modal-body .close {
+    position: absolute;
+    top: -9px;
+    right: -11px;
+    z-index: 999999;
+    background-color: #000000;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 0px 5px;
+    width: 25px;
+    height: 26px;
+    color: white;
+    opacity: 1;
+}
+
+.modal-content {
+    margin-top: -8px;
+    margin-right: 1px;
+}
+
+#modal_image_box {
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+    background-color: #eee;
+    height: 300px;
+}
+
+#modal_image_box img {
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    left: 50%;
+    top: 50%;
+}
+
+#modal_ads_name {
+    float: right;
+    margin: 10px 0 0 0;
+    overflow: hidden;
+    width: 75%;
+    height: 40px;
+    font-weight: bold;
+
+}
+
+#modal_data_box :nth-child(3),
+#modal_data_box :nth-child(4) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#modal_buttom_data {
+    display: flex;
+}
+
+#modal_buttom_data p {
+    flex-wrap: wrap;
+    margin-left: 40px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.modal-footer {
+    display: flex
+}
+
+.modal-footer div {
+    flex-wrap: wrap;
+    width: 48%;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+#modal_ads_price {
+    float: left;
+    clear: left;
+    text-align: left;
+    height: 40px;
+    width: 25%;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: sans-serif;
+    background-color: #eaeaea;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 5px;
+    padding-right: 3px;
+}
+
+#modal_phone {
+    background-color: #3fc3c7;
+    color: #1b2946;
+
+}
+
+#modal_email {
+    background-color: #9dd22c;
+    color: #1b2946;
+}
+
+.glyphicon-earphone,
+.glyphicon-envelope {
+    top: 4px;
+    left: 5px;
+    margin-right: 15px;
+    font-size: 17px;
+    font-weight: bolder;
+    color: white;
+}
+
+#modal_data_box hr {
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+}
+
+/* end maodal style */

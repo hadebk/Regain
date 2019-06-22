@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <title>log in</title>
+    <!------------->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!--[if lt IE 9]>-->
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <!------------->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style-login.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"></script>
+
+
+</head>
+
+<body>
+
+
+    <!-- start main div -->
+    <div id="main-div">
+        <div id="navbar">
+            <div class="container" id="logo-container">
+                <div id="logo">logo</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="title">تسجيل الدخول</div>
+            <div id="form-box">
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="الإيميل" required>
+                    <small id="emailHelp" class="form-text text-muted">نحن لن نشارك إيميلك مع أي جهة أخرى.</small>
+                    <div class="alert alert-danger custom-alert">برجاء إدخال الإيميل</div>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="pass" class="form-control" id="exampleInputPassword1" placeholder="كلمة السر" required>
+                    <small id="emailHelp" class="form-text text-muted">كلمة السر على الأقل 6 أحرف أو أرقام.</small>
+                    <div class="alert alert-danger custom-alert">برجاء إدخال كلمة المرور</div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="btn-login">سجل الدخول</button>
+                <a id="create-new-acc" href="sing-up.html">أنشئ حساب جديد</a>
+            </div>
+            <div id="btns-social">
+                <button type="submit" class="btn btn-primary" id="btn-google">
+                    <img src="images/search%20(1).png" id="google">
+                    تسجيل الدخول بإستخدام حساب جوجل
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- end main div -->
+ 
+    
+    <script src="js/query.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/notify.min.js"></script>
+    <script src="js/script-logIn.js"></script>
+
+
+</body>
+
+</html>
