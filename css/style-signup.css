@@ -36,9 +36,13 @@
 
 #logo {
     float: right;
-    margin-top: 23px;
-    color: #1b2946;
     font-size: 20px;
+    max-width: 50%;
+    height: 130px;
+    margin-top: -23px;
+}
+#logo img{
+    max-height: 100%;
 }
 
 #title {
@@ -60,7 +64,7 @@
     height: auto;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    padding: 20px 20px;
+    padding: 20px 20px 30px 20px;
     margin-left: auto;
     margin-right: auto;
     background-color: white;
@@ -81,4 +85,21 @@
     display: none;
 }
 
+/*************** responsive design ******************/
+/* mobile */
+@media only screen and (max-width:767px){
+    
+    #body-box div{
+    width: 100%;
+}
+    #btn-signup{
+        width: 100%;
+    }
+     #logo-container{
+        display: flex;
+    justify-content: center;
+    }
+
+    
+}
 

@@ -36,11 +36,14 @@
 
 #logo {
     float: right;
-    margin-top: 23px;
-    color: #1b2946;
     font-size: 20px;
+    max-width: 50%;
+    height: 130px;
+    margin-top: -23px;
 }
-
+#logo img{
+    max-height: 100%;
+}
 #title {
     color: #1b2946;
     font-size: 25px;
@@ -111,3 +114,30 @@
     margin-top: 3px;
     display: none;
 }
+
+/*************** responsive design ******************/
+/* mobile */
+@media only screen and (max-width:767px) {
+
+    #body-box div {
+        width: 100%;
+    }
+
+    #btn-login {
+        width: 100%;
+    }
+    #logo-container{
+        display: flex;
+    justify-content: center;
+    }
+
+}
+
+
+
+
+
+
+
+
+

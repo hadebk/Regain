@@ -1,21 +1,17 @@
 $(document).ready(function () {
 
-
-
+    // fixed thead in table 
+    'use strict'
     window.onload = function () {
-        var tableCont = document.querySelector('#pills-home')
-        /**
-         * scroll handle
-         * @param {event} e -- scroll event
-         */
+        var tableCont = document.querySelector('.table-responsive');
+
         function scrollHandle(e) {
             var scrollTop = this.scrollTop;
             this.querySelector('thead').style.transform = 'translateY(' + scrollTop + 'px)';
         }
-
         tableCont.addEventListener('scroll', scrollHandle)
     }
-
+    /////////////////////////////////////////////////////////////
     (function () {
 
         // Your web app's Firebase configuration
@@ -34,6 +30,101 @@ $(document).ready(function () {
         var auth = firebase.auth();
         var uid;
         var keys = [];
+
+        var v_adsName = false;
+        var v_adsPrice = false;
+        var v_adsDesc = false;
+        var v_adsPersonName = false;
+        var v_adsPhone = false;
+        var v_adsEmail = false;
+
+        // Get ELements
+        const adsName = document.getElementById("ads-name");
+        const adsCategory = document.getElementById("ads_category");
+        const adsPrice = document.getElementById("ads-price");
+        const adsDescribtion = document.getElementById("ads-describtion");
+        const adsCity = document.getElementById("ads-city");
+        const adsPersonName = document.getElementById("ads-personName");
+        const adsPhoneNumber = document.getElementById("ads-phoneNumber");
+        const adsEmail = document.getElementById("ads-email");
+
+        // input validation //
+
+        // ads name input
+        $("#ads-name").blur(function () {
+            if ($(this).val().length == 0) {
+                v_adsName = true;
+                $(this).css("border", "1px solid #f00");
+                $(this).parent().find(".custom-alert").fadeIn(200);
+            } else {
+                v_adsName = false;
+                $(this).css("border", "1px solid #080");
+                $(this).parent().find(".custom-alert").fadeOut(200);
+            }
+        });
+        // ads price input
+        $("#ads-price").blur(function () {
+            if ($(this).val().length == 0) {
+                v_adsPrice = true;
+                $(this).css("border", "1px solid #f00");
+                $(this).parent().find(".custom-alert").fadeIn(200);
+            } else {
+                v_adsPrice = false;
+                $(this).css("border", "1px solid #080");
+                $(this).parent().find(".custom-alert").fadeOut(200);
+            }
+        });
+
+        // ads description input
+        $("#ads-describtion").blur(function () {
+            if ($(this).val().length == 0) {
+                v_adsDesc = true;
+                $(this).css("border", "1px solid #f00");
+                $(this).parent().find(".custom-alert").fadeIn(200);
+            } else {
+                v_adsDesc = false;
+                $(this).css("border", "1px solid #080");
+                $(this).parent().find(".custom-alert").fadeOut(200);
+            }
+        });
+        // ads person name input
+        $("#ads-personName").blur(function () {
+            if ($(this).val().length == 0) {
+                v_adsPersonName = true;
+                $(this).css("border", "1px solid #f00");
+                $(this).parent().find(".custom-alert").fadeIn(200);
+            } else {
+                v_adsPersonName = false;
+                $(this).css("border", "1px solid #080");
+                $(this).parent().find(".custom-alert").fadeOut(200);
+            }
+        });
+        // ads person phone input
+        $("#ads-phoneNumber").blur(function () {
+            if ($(this).val().length !== 11) {
+                v_adsPhone = true;
+                $(this).css("border", "1px solid #f00");
+                $(this).parent().find(".custom-alert").fadeIn(200);
+            } else {
+                v_adsPhone = false;
+                $(this).css("border", "1px solid #080");
+                $(this).parent().find(".custom-alert").fadeOut(200);
+            }
+        });
+        // email input
+        $("#ads-email").blur(function () {
+            var res = /.+@[a-z A-Z]*\.com/.test($(this).val());
+            if (!res) {
+                v_adsEmail = true;
+                $(this).css("border", "1px solid #f00");
+                $(this).parent().find(".custom-alert").fadeIn(200);
+            } else {
+                v_adsEmail = false;
+                $(this).css("border", "1px solid #080");
+                $(this).parent().find(".custom-alert").fadeOut(200);
+            }
+        });
+
         auth.onAuthStateChanged(firebaseUser => {
             if (firebaseUser) {
                 // User is signed in.
@@ -56,7 +147,7 @@ $(document).ready(function () {
                         console.log("not log out !");
                     });
                 });
-                //////////////////////////////
+                ////////////////////////////////////////////////////
                 uid = auth.currentUser.uid;
                 console.log(uid);
                 firebase.database().ref("ads").orderByChild("userId").equalTo(uid).on('value', function (snapshot) {
@@ -109,15 +200,7 @@ $(document).ready(function () {
                         var nameOfAds, categoryOfAds, priceOfAds, descOfAds, cityOfAds, personNameOfAds, phoneOfAds, emailOfAds, imgOfAds, dateAds, uidAds;
 
                         // show modal when click update button
-                        // Get ELements
-                        const adsName = document.getElementById("ads-name");
-                        const adsCategory = document.getElementById("ads_category");
-                        const adsPrice = document.getElementById("ads-price");
-                        const adsDescribtion = document.getElementById("ads-describtion");
-                        const adsCity = document.getElementById("ads-city");
-                        const adsPersonName = document.getElementById("ads-personName");
-                        const adsPhoneNumber = document.getElementById("ads-phoneNumber");
-                        const adsEmail = document.getElementById("ads-email");
+
                         $(".btn-showAdsToUpdate").click(function () {
                             key_ads = $(this).parents(':eq(1)').attr("class");
                             console.log(key_ads);
@@ -186,9 +269,42 @@ $(document).ready(function () {
                                                 const phoneNumber = adsPhoneNumber.value;
                                                 const email = adsEmail.value;
 
-                                                updateAds(name, category, price, description, city, personName, phoneNumber, email, uidAds, dateAds, imgOfAds);
-                                                console.log("تم تعديل المعلومات بنجاح :)" + key_ads);
-                                                document.location.reload(true)
+                                                // check if input empty or filled
+
+                                                if (!v_adsName && !v_adsPrice && !v_adsDesc && !v_adsPersonName && !v_adsPhone && !v_adsEmail) {
+                                                    updateAds(name, category, price, description, city, personName, phoneNumber, email, uidAds, dateAds, imgOfAds);
+                                                    console.log("تم تعديل المعلومات بنجاح :)" + key_ads);
+                                                    document.location.reload(true)
+                                                    console.log("validation done and post ads")
+                                                } else {
+                                                    console.log("error");
+                                                    if (v_adsName) {
+                                                        $("#ads-name").css("border", "1px solid #f00");
+                                                        $("#ads-name").parent().find(".custom-alert").fadeIn(200);
+                                                    }
+                                                    if (v_adsPrice) {
+                                                        $("#ads-price").css("border", "1px solid #f00");
+                                                        $("#ads-price").parent().find(".custom-alert").fadeIn(200);
+                                                    }
+                                                    if (v_adsDesc) {
+                                                        $("#ads-describtion").css("border", "1px solid #f00");
+                                                        $("#ads-describtion").parent().find(".custom-alert").fadeIn(200);
+                                                    }
+                                                    if (v_adsPersonName) {
+                                                        $("#ads-personName").css("border", "1px solid #f00");
+                                                        $("#ads-personName").parent().find(".custom-alert").fadeIn(200);
+                                                    }
+                                                    if (v_adsPhone) {
+                                                        $("#ads-phoneNumber").css("border", "1px solid #f00");
+                                                        $("#ads-phoneNumber").parent().find(".custom-alert").fadeIn(200);
+                                                    }
+                                                    if (v_adsEmail) {
+                                                        $("#ads-email").css("border", "1px solid #f00");
+                                                        $("#ads-email").parent().find(".custom-alert").fadeIn(200);
+                                                    }
+                                                }
+
+
 
 
                                             }); //end of add event
@@ -204,39 +320,37 @@ $(document).ready(function () {
                             }); // end of onAuthStateChanged()
                         }); // end of click event
 
-
-
                         // delet ads function
-                            $(".btn-delet").click(function () {
-                                console.log("delet")
-                                var key_ads = $(this).parents(':eq(1)').attr("class");
-                                var urlimg;
-                                console.log("key:" + key_ads);
-                                // get url
-                                firebase.database().ref("ads").orderByKey().equalTo(key_ads).on('value', function (snapshot) {
-                                    if (snapshot.exists()) {
-                                        // get data
-                                        snapshot.forEach(function (data) {
-                                            urlimg = data.val().photoUrl;
-                                        })
-                                        console.log("url-2:" + urlimg);
-                                        // Create a reference to the file to delete
-                                        var storage = firebase.storage();
-                                        var desertRef = storage.refFromURL(urlimg);
-                                        // Delete the file
-                                        desertRef.delete().then(function () {
-                                            // File deleted successfully
-                                            console.log("delet image");
-                                        }).catch(function (error) {
-                                            // Uh-oh, an error occurred!
-                                        });
-                                        firebase.database().ref('/ads/' + key_ads).remove();
-                                        console.log(" delet done");
-                                    } else {
-                                        console.log("no data")
-                                    }
-                                });
+                        $(".btn-delet").click(function () {
+                            console.log("delet")
+                            var key_ads = $(this).parents(':eq(1)').attr("class");
+                            var urlimg;
+                            console.log("key:" + key_ads);
+                            // get url
+                            firebase.database().ref("ads").orderByKey().equalTo(key_ads).on('value', function (snapshot) {
+                                if (snapshot.exists()) {
+                                    // get data
+                                    snapshot.forEach(function (data) {
+                                        urlimg = data.val().photoUrl;
+                                    })
+                                    console.log("url-2:" + urlimg);
+                                    // Create a reference to the file to delete
+                                    var storage = firebase.storage();
+                                    var desertRef = storage.refFromURL(urlimg);
+                                    // Delete the file
+                                    desertRef.delete().then(function () {
+                                        // File deleted successfully
+                                        console.log("delet image");
+                                    }).catch(function (error) {
+                                        // Uh-oh, an error occurred!
+                                    });
+                                    firebase.database().ref('/ads/' + key_ads).remove();
+                                    console.log(" delet done");
+                                } else {
+                                    console.log("no data")
+                                }
                             });
+                        });
                         // end deletAds
                     } else {
                         var node = document.getElementById("ads-table");
@@ -253,7 +367,6 @@ $(document).ready(function () {
                     }
 
                 });
-
 
                 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -307,7 +420,7 @@ $(document).ready(function () {
                                         content += '<td>';
                                         content += '<div class="box">';
                                         content += '<div class="image">';
-                                        content += '<div class="btn-delet-fav"><button><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>حذف</button></div>';
+                                        content += '<span class="glyphicon glyphicon-star" aria-hidden="true"></span>';
                                         content += '<img src=' + imgUrlOfAds + '>';
                                         content += '</div>';
                                         content += '<div class="data" data-toggle="modal" data-target="#centralModalLg-fav">';
@@ -347,6 +460,10 @@ $(document).ready(function () {
                             "height": "550px",
                             "margin-top": "-30px"
                         });
+                        var node = document.getElementById("fav-table");
+                        while (node.hasChildNodes()) {
+                            node.removeChild(node.lastChild);
+                        }
                         console.log("no data yet!");
                     }
                 });
@@ -403,11 +520,11 @@ $(document).ready(function () {
                                 $('#modal_ads_image').attr('src', imgOfAds);
                                 $("#modal_ads_name").html(nameOfAds);
                                 $("#modal_ads_price").html(priceOfAds + " " + "ج.م" + " / كجم ");
-                                $("#modal_ads_category").html("الصنف : " + categoryOfAds);
-                                $("#modal_ads_disc").html("الوصف : " + descOfAds);
-                                $("#modal_ads_poster_name").html("اسم المعلن : " + personNameOfAds);
-                                $("#modal_ads_location").html("المدينة : " + cityOfAds);
-                                $("#modal_ads_data").html("تاريخ الإعلان : " + dateAds);
+                                $("#modal_ads_category").html("<strong>الصنف : </strong>" + categoryOfAds);
+                                $("#modal_ads_disc").html("<strong>الوصف : </strong>" + descOfAds);
+                                $("#modal_ads_poster_name").html("<strong>اسم المعلن : </strong>" + personNameOfAds);
+                                $("#modal_ads_location").html("<strong>المدينة : </strong>" + cityOfAds);
+                                $("#modal_ads_data").html("<strong>تاريخ الإعلان : </strong>" + dateAds);
                                 $("#modal_phone").html(phoneOfAds + "<span class='glyphicon glyphicon-earphone' aria-hidden='true'></span>");
                                 $("#modal_email").html(emailOfAds + "<span class='glyphicon glyphicon-envelope' aria-hidden='true'></span>");
 
@@ -423,7 +540,8 @@ $(document).ready(function () {
 
 
                     // delet ads from fav button action
-                    $(".btn-delet-fav").click(function () {
+                    $(".box .image .glyphicon-star").click(function () {
+                        $(this).css("color", "lightgray")
                         var key_of_fav_ads1 = $(this).parents(':eq(3)').attr("class");
                         console.log(key_of_fav_ads1 + "----del");
                         // delet fav from database
@@ -445,10 +563,7 @@ $(document).ready(function () {
                     })
 
                 } // end of show_more_details()
-
-
-
-                /////////////////////////////////////////////////////////////////////////////////////////////////////////
+                ////////////////////////////////////////////////////////////////////////////////////////////////
 
             } else {
                 // User is signed out.
@@ -458,14 +573,28 @@ $(document).ready(function () {
             }
         }); // end of onAuthStateChanged()
 
-
-
-
-
-
-
-
     }()); // end of main function
 
+    // responsive deiting
+    var win = $(window).width();
+    if (win <= 767) { // mobile screen
+        console.log("mobile")
+        $("#dash-mneu").click(function () {
+            if ($(this).attr('data-click-state') == 1) {
+                $(this).attr('data-click-state', 0)
+                $(".mobile-menu").css("display", "none");
+                $(".mobile-menu").fadeOut(600);
+                $("#dash-mneu span").removeClass("glyphicon glyphicon-remove glyphicon")
+                $("#dash-mneu span").addClass("glyphicon-align-justify glyphicon")
+            } else {
+                $(this).attr('data-click-state', 1);
+                $(".mobile-menu").css("display", "flex");
+                $(".mobile-menu").fadeIn(600);
+                $("#dash-mneu span").removeClass("glyphicon-align-justify")
+                $("#dash-mneu span").addClass("glyphicon glyphicon-remove")
+            }
+        })
+
+    }
 
 }); // end of ready function

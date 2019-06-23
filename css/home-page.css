@@ -11,11 +11,12 @@
 /* hide scroll side */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
+-webkit-appearance: none;
     margin: 0;
 }
 
-.glyphicon {
+#navbar .glyphicon,
+#search-part .glyphicon {
     top: 2px;
     left: 5px;
     font-size: 17px;
@@ -37,19 +38,21 @@ body {}
 /*   start navbar style */
 #logo {
     float: right;
-    margin-top: 23px;
     font-size: 20px;
     max-width: 50%;
+    height: 130px;
+    margin-top: -23px;
 }
-
+#logo img{
+    max-height: 100%;
+}
 #navbar {
     background-image: url(../images/nav-bg.png);
     background-color: #defbff;
     background-repeat: repeat-x;
-    background-position: 30% 12%;
     background-attachment: fixed;
     width: 100%;
-    height: 350px;
+    height: 309px;
 }
 
 #btn-singUp,
@@ -169,24 +172,18 @@ table tr {
 }
 
 .glyphicon-star {
-    z-index: 1;
-    display: inline-block;
     position: absolute;
     font-size: 27px;
-    top: 10px;
-    right: -75%;
+    right: 0;
     color: lightgray;
     -webkit-text-stroke: 1px #555;
 }
 
 .stared {
     color: #3fc3c7;
-    z-index: 1;
-    display: inline-block;
     position: absolute;
-    font-size: 32px;
-    top: 10px;
-    right: -75%;
+    font-size: 27px;
+    right: 0;
     -webkit-text-stroke: 1px #555;
 }
 
@@ -275,6 +272,15 @@ table tr {
 
 /* end ads box part */
 
+/* footer */
+#contact-us{
+    color: #defbff;
+                text-decoration: none;
+                cursor: pointer;
+                margin-top: 30px;
+                display: inline-block;
+                margin-left: 30px;
+}
 /* start maodal style */
 .modal-body {
     color: #1b2946;
@@ -335,8 +341,7 @@ table tr {
 #modal_data_box :nth-child(4) {
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 13px;
-    font-weight: bold;
+    font-size: 15px;
 }
 
 #modal_buttom_data {
@@ -348,8 +353,7 @@ table tr {
     margin-left: 40px;
     margin-bottom: 0;
     margin-top: 10px;
-    font-size: 13px;
-    font-weight: bold;
+    font-size: 15px;
 }
 
 .modal-footer {
@@ -363,7 +367,7 @@ table tr {
     margin: 1%;
     border-radius: 5px;
     text-align: left;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
 
 }
@@ -382,6 +386,13 @@ table tr {
     text-align: center;
     padding-top: 5px;
     padding-right: 3px;
+}
+
+#modal_ads_price img{
+        max-height: 100%;
+    height: 23px;
+    margin-left: 5px;
+    margin-top: -3px;
 }
 
 #modal_phone {
@@ -410,7 +421,10 @@ table tr {
     margin-top: 12px;
     margin-bottom: 12px;
 }
-#dash-mneu{display: none}
+
+#dash-mneu {
+    display: none
+}
 
 /* end maodal style */
 
@@ -420,6 +434,11 @@ table tr {
 
 /* for mobile */
 @media only screen and (max-width:767px) {
+
+    #navbar {
+           background-position: 73% 96px;
+    background-size: 100vh;
+    }
 
     #btn-search a,
     #btn-filter a {
@@ -432,9 +451,12 @@ table tr {
         display: flex;
         flex-direction: column-reverse;
     }
+    #search-part h1{
+        margin: 0 20px
+    }
 
     #price_filter {
-        
+
         flex-direction: column-reverse;
     }
 
@@ -448,15 +470,13 @@ table tr {
     }
 
     #logo {
-        width: 90%;
-        max-width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        padding-left: 15px;
+       max-width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    float: left;
     }
 
     #dash-mneu {
-        width: 10%;
         margin-top: 18px;
         float: right;
         padding-right: 15px;
@@ -473,12 +493,19 @@ table tr {
         border-radius: 5px;
     }
 
+    #navbar #dash-mneu .glyphicon {
+        font-size: 24px;
+    }
+
     .mobile-menu {
         display: none;
-        height: 140px;
-        flex-flow: column;
-        background-color: #1b2946;
-        margin-top: 73px;
+           height: 140px;
+    width: 100%;
+    flex-flow: column;
+    background-color: #1b2946;
+    top: 80px;
+    position: absolute;
+    z-index: 1;
     }
 
     .mobile-menu div a {
@@ -533,12 +560,45 @@ table tr {
         text-align: center;
     }
 
-    #btn-search a,#btn-filter a {
+    #btn-search a,
+    #btn-filter a {
         width: 100%;
         text-align: center;
     }
 
     #centralModalLg {
         padding-top: 15px;
+    }
+    
+    /* footer */
+    #logo-container{
+        text-align: center
+    }
+    #logo-container a{
+        width: 100%;
+    }
+    #logo-container #contact-us{
+        margin-top: 0px;
+    }
+    #logo-container #terms{
+        margin-bottom: 20px
+    }
+ 
+    
+}
+
+/* tablet*/
+@media (min-width:768px) and (max-width:991px) {
+    .box .image {
+        width: 30%
+    }
+
+    .box .data {
+        width: 70%;
+    }
+    
+    #navbar{
+            background-position: 80% 0;
+
     }
 }

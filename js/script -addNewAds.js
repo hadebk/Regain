@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function () { 
     var key;
     (function () {
 
@@ -205,7 +205,7 @@ $(document).ready(function () {
                 console.log(postDate)
             }
             var user = firebase.auth().currentUser;
-            if (true) {
+            if (user) {
                 // User is signed in.
 
                 // check if input empty or filled

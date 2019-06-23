@@ -44,7 +44,7 @@ $(document).ready(function () {
         });
         ///////////////////////////////////////////////////////////////////////////////////////////////
         // start show modal with all data when click on ads
-        function show_more_details() { 
+        function show_more_details() {
             $(".data").click(function () {
                 var key_of_ads = $(this).parents(':eq(2)').attr("class");
                 console.log(key_of_ads);
@@ -87,12 +87,12 @@ $(document).ready(function () {
                         // set data to inputs in modal
                         $('#modal_ads_image').attr('src', imgOfAds);
                         $("#modal_ads_name").html(nameOfAds);
-                        $("#modal_ads_price").html(priceOfAds + " " + "ج.م" + "/ك");
-                        $("#modal_ads_category").html("الصنف : " + categoryOfAds);
-                        $("#modal_ads_disc").html("الوصف : " + descOfAds);
-                        $("#modal_ads_poster_name").html("اسم المعلن : " + personNameOfAds);
-                        $("#modal_ads_location").html("المدينة : " + cityOfAds);
-                        $("#modal_ads_data").html("تاريخ الإعلان : " + dateAds);
+                        $("#modal_ads_price").html(priceOfAds + " " + "ج.م" + " / كجم ");
+                        $("#modal_ads_category").html("<strong>الصنف : </strong>" + categoryOfAds);
+                        $("#modal_ads_disc").html("<strong>الوصف : </strong>" + descOfAds);
+                        $("#modal_ads_poster_name").html("<strong>اسم المعلن : </strong>" + personNameOfAds);
+                        $("#modal_ads_location").html("<strong>المدينة : </strong>" + cityOfAds);
+                        $("#modal_ads_data").html("<strong>تاريخ الإعلان : </strong>" + dateAds);
                         $("#modal_phone").html(phoneOfAds + "<span class='glyphicon glyphicon-earphone' aria-hidden='true'></span>");
                         $("#modal_email").html(emailOfAds + "<span class='glyphicon glyphicon-envelope' aria-hidden='true'></span>");
 
@@ -109,7 +109,7 @@ $(document).ready(function () {
 
         } // end of show_more_details()
         show_more_details();
-        
+
         //////////////////////////////////////////////////////////////////////////////////////////////////////
 
         // retrive all ads and show it in table
@@ -156,7 +156,7 @@ $(document).ready(function () {
                         content += '</div>';
                         content += '<div class="data" data-toggle="modal" data-target="#centralModalLg">';
                         content += '<h3 class="ads-name">' + nameOfAds + '</h3>';
-                        content += '<h4 class="ads-price">' + priceOfAds +" "+ 'ج.م/ك </h4>';
+                        content += '<h4 class="ads-price">' + priceOfAds + " " + ' ج.م</h4>';
                         content += '<p class="ads-uther-name">' + nameOfAuther + '</p>';
                         content += '<hr>';
                         content += '<p class="ads-date">' + dateOfAds + '</p>';
@@ -183,7 +183,7 @@ $(document).ready(function () {
             });
         } // end of function diplay alla data()
         diplay_all_data();
-        
+
         //////////////////////////////////////////////////////////////////////////////////////////////////////
 
         // retrive data based on filter value(category/city)
@@ -231,7 +231,7 @@ $(document).ready(function () {
                         content += '</div>';
                         content += '<div class="data" data-toggle="modal" data-target="#centralModalLg">';
                         content += '<h3 class="ads-name">' + nameOfAds + '</h3>';
-                        content += '<h4 class="ads-price">' + priceOfAds + '&nbsp;ج.م</h4>';
+                        content += '<h4 class="ads-price">' + priceOfAds + ' ج.م</h4>';
                         content += '<p class="ads-uther-name">' + nameOfAuther + '</p>';
                         content += '<hr>';
                         content += '<p class="ads-date">' + dateOfAds + '</p>';
@@ -262,11 +262,10 @@ $(document).ready(function () {
 
         // action button search
         btn_search.addEventListener("click", function () {
-            // show filter button when click search button
-            $("#price_filter").css("display", "flex");
-            //$("#price_filter").css("flex-direction", "row-reverse");
             // check if category search has value
             if (city_search.value !== "حدد المدينة" && some_search.value !== "حدد الفئة") {
+                // show filter button when click search button
+                $("#price_filter").css("display", "flex");
                 // retrive all ads
                 if (city_search.value == "الكل" && some_search.value == "الكل") {
                     console.log("all");
@@ -317,7 +316,7 @@ $(document).ready(function () {
                                     content += '</div>';
                                     content += '<div class="data" data-toggle="modal" data-target="#centralModalLg">';
                                     content += '<h3 class="ads-name">' + nameOfAds + '</h3>';
-                                    content += '<h4 class="ads-price">' + priceOfAds + '&nbsp;ج.م</h4>';
+                                    content += '<h4 class="ads-price">' + priceOfAds + ' ج.م</h4>';
                                     content += '<p class="ads-uther-name">' + nameOfAuther + '</p>';
                                     content += '<hr>';
                                     content += '<p class="ads-date">' + dateOfAds + '</p>';
@@ -347,6 +346,8 @@ $(document).ready(function () {
                     });
                 }
             } else if (some_search.value !== "حدد الفئة") {
+                 // show filter button when click search button
+            $("#price_filter").css("display", "flex");
                 if (some_search.value == "الكل") {
                     console.log("all-cat");
                     diplay_all_data();
@@ -355,6 +356,8 @@ $(document).ready(function () {
                     category_city_ads("category", some_search.value);
                 }
             } else if (city_search.value !== "حدد المدينة") {
+                 // show filter button when click search button
+            $("#price_filter").css("display", "flex");
                 if (some_search.value == "الكل") {
                     console.log("all-cat");
                     diplay_all_data();
@@ -427,7 +430,7 @@ $(document).ready(function () {
                                             content += '</div>';
                                             content += '<div class="data" data-toggle="modal" data-target="#centralModalLg">';
                                             content += '<h3 class="ads-name">' + nameOfAds + '</h3>';
-                                            content += '<h4 class="ads-price">' + priceOfAds + '&nbsp;ج.م</h4>';
+                                            content += '<h4 class="ads-price">' + priceOfAds + ' ج.م</h4>';
                                             content += '<p class="ads-uther-name">' + nameOfAuther + '</p>';
                                             content += '<hr>';
                                             content += '<p class="ads-date">' + dateOfAds + '</p>';
@@ -513,7 +516,7 @@ $(document).ready(function () {
                                             content += '</div>';
                                             content += '<div class="data" data-toggle="modal" data-target="#centralModalLg">';
                                             content += '<h3 class="ads-name">' + nameOfAds + '</h3>';
-                                            content += '<h4 class="ads-price">' + priceOfAds + '&nbsp;ج.م</h4>';
+                                            content += '<h4 class="ads-price">' + priceOfAds + ' ج.م</h4>';
                                             content += '<p class="ads-uther-name">' + nameOfAuther + '</p>';
                                             content += '<hr>';
                                             content += '<p class="ads-date">' + dateOfAds + '</p>';
@@ -599,7 +602,7 @@ $(document).ready(function () {
                                             content += '</div>';
                                             content += '<div class="data" data-toggle="modal" data-target="#centralModalLg">';
                                             content += '<h3 class="ads-name">' + nameOfAds + '</h3>';
-                                            content += '<h4 class="ads-price">' + priceOfAds + '&nbsp;ج.م</h4>';
+                                            content += '<h4 class="ads-price">' + priceOfAds + ' ج.م</h4>';
                                             content += '<p class="ads-uther-name">' + nameOfAuther + '</p>';
                                             content += '<hr>';
                                             content += '<p class="ads-date">' + dateOfAds + '</p>';
@@ -690,7 +693,7 @@ $(document).ready(function () {
                                         content += '</div>';
                                         content += '<div class="data" data-toggle="modal" data-target="#centralModalLg">';
                                         content += '<h3 class="ads-name">' + nameOfAds + '</h3>';
-                                        content += '<h4 class="ads-price">' + priceOfAds + '&nbsp;ج.م</h4>';
+                                        content += '<h4 class="ads-price">' + priceOfAds + ' ج.م</h4>';
                                         content += '<p class="ads-uther-name">' + nameOfAuther + '</p>';
                                         content += '<hr>';
                                         content += '<p class="ads-date">' + dateOfAds + '</p>';
@@ -772,7 +775,7 @@ $(document).ready(function () {
                                         content += '</div>';
                                         content += '<div class="data" data-toggle="modal" data-target="#centralModalLg">';
                                         content += '<h3 class="ads-name">' + nameOfAds + '</h3>';
-                                        content += '<h4 class="ads-price">' + priceOfAds + '&nbsp;ج.م</h4>';
+                                        content += '<h4 class="ads-price">' + priceOfAds + ' ج.م</h4>';
                                         content += '<p class="ads-uther-name">' + nameOfAuther + '</p>';
                                         content += '<hr>';
                                         content += '<p class="ads-date">' + dateOfAds + '</p>';
@@ -854,7 +857,7 @@ $(document).ready(function () {
                                         content += '</div>';
                                         content += '<div class="data" data-toggle="modal" data-target="#centralModalLg">';
                                         content += '<h3 class="ads-name">' + nameOfAds + '</h3>';
-                                        content += '<h4 class="ads-price">' + priceOfAds + '&nbsp;ج.م</h4>';
+                                        content += '<h4 class="ads-price">' + priceOfAds + ' ج.م</h4>';
                                         content += '<p class="ads-uther-name">' + nameOfAuther + '</p>';
                                         content += '<hr>';
                                         content += '<p class="ads-date">' + dateOfAds + '</p>';
@@ -941,7 +944,7 @@ $(document).ready(function () {
                                         content += '</div>';
                                         content += '<div class="data" data-toggle="modal" data-target="#centralModalLg">';
                                         content += '<h3 class="ads-name">' + nameOfAds + '</h3>';
-                                        content += '<h4 class="ads-price">' + priceOfAds + '&nbsp;ج.م</h4>';
+                                        content += '<h4 class="ads-price">' + priceOfAds + ' ج.م</h4>';
                                         content += '<p class="ads-uther-name">' + nameOfAuther + '</p>';
                                         content += '<hr>';
                                         content += '<p class="ads-date">' + dateOfAds + '</p>';
@@ -1023,7 +1026,7 @@ $(document).ready(function () {
                                         content += '</div>';
                                         content += '<div class="data" data-toggle="modal" data-target="#centralModalLg">';
                                         content += '<h3 class="ads-name">' + nameOfAds + '</h3>';
-                                        content += '<h4 class="ads-price">' + priceOfAds + '&nbsp;ج.م</h4>';
+                                        content += '<h4 class="ads-price">' + priceOfAds + ' ج.م</h4>';
                                         content += '<p class="ads-uther-name">' + nameOfAuther + '</p>';
                                         content += '<hr>';
                                         content += '<p class="ads-date">' + dateOfAds + '</p>';
@@ -1104,7 +1107,7 @@ $(document).ready(function () {
                                         content += '</div>';
                                         content += '<div class="data" data-toggle="modal" data-target="#centralModalLg">';
                                         content += '<h3 class="ads-name">' + nameOfAds + '</h3>';
-                                        content += '<h4 class="ads-price">' + priceOfAds + '&nbsp;ج.م</h4>';
+                                        content += '<h4 class="ads-price">' + priceOfAds + ' ج.م</h4>';
                                         content += '<p class="ads-uther-name">' + nameOfAuther + '</p>';
                                         content += '<hr>';
                                         content += '<p class="ads-date">' + dateOfAds + '</p>';
@@ -1142,17 +1145,17 @@ $(document).ready(function () {
 
         // favorites ads function
         function addToFaviort() {
-           
+
 
             $('.glyphicon-star').on('click', function () {
-                
+
                 auth.onAuthStateChanged(firebaseUser => {
                     if (firebaseUser) {
                         // User is signed in.
                         var userID = firebaseUser.uid;
                         var keyOfAds;
                         if ($(this).attr('data-click-state') == 1) { // clicked secound time
-                            $(this).attr('data-click-state',0)
+                            $(this).attr('data-click-state', 0)
                             $(this).css("color", "lightgray")
                             var key_of_fav_ads1 = $(this).parents(':eq(3)').attr("class");
                             console.log(key_of_fav_ads1 + "----del");
@@ -1169,10 +1172,10 @@ $(document).ready(function () {
                                         }
                                     });
                                 } else {
-                                    console.log("no data yet!"); 
+                                    console.log("no data yet!");
                                 }
                             }) // end of delet
-                            
+
                         } else { // clicked first tome
                             $(this).attr('data-click-state', 1)
                             $(this).css("color", "#3fc3c7")
@@ -1184,7 +1187,7 @@ $(document).ready(function () {
                             }).then(fun => {
                                 $.notify("تم إضافة الإعلان إلى المفضلة", "success");
                             })
-                            
+
                         }
                     } else {
                         // User is signed out.
@@ -1197,29 +1200,26 @@ $(document).ready(function () {
         //////////////////////////////////////////////////////////////////////////////////////////
 
     }()); // end of main fnuction()
-    
-       // responsive deiting
-    var win=$(window).width();
-    if (win<=767){ // mobile screen
+
+    // responsive deiting
+    var win = $(window).width();
+    if (win <= 767) { // mobile screen
         console.log("mobile")
-        $("#dash-mneu").click(function(){
-            if($(this).attr('data-click-state') == 1){
-                $(this).attr('data-click-state',0)
-                $(".mobile-menu").css("display","none");
+        $("#dash-mneu").click(function () {
+            if ($(this).attr('data-click-state') == 1) {
+                $(this).attr('data-click-state', 0)
+                $(".mobile-menu").css("display", "none");
                 $(".mobile-menu").fadeOut(400);
                 $("#dash-mneu span").removeClass("glyphicon glyphicon-remove glyphicon")
                 $("#dash-mneu span").addClass("glyphicon-align-justify glyphicon")
-            }else{
+            } else {
                 $(this).attr('data-click-state', 1);
-                $(".mobile-menu").css("display","flex");
+                $(".mobile-menu").css("display", "flex");
                 $(".mobile-menu").fadeIn(400);
                 $("#dash-mneu span").removeClass("glyphicon-align-justify")
-                $("#dash-mneu span").addClass("glyphicon glyphicon-remove")   
+                $("#dash-mneu span").addClass("glyphicon glyphicon-remove")
             }
         })
-        
+
     }
 }); // end of ready function()
-
- 
-

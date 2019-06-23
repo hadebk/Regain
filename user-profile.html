@@ -28,21 +28,23 @@
     <!-- start main div -->
     <div class="container-fluid" id="main-div">
 
-
         <div id="navbar">
             <div class="container">
-                <div id="btn-addAds">
-                    <a href="add-new-ad.html"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>أضف اعلان</a>
-                </div>
-                <div id="btn-singUp">
-                    <a href="log-in.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>تسجيل الدخول</a>
-                </div>
+                <div id="dash-mneu"><span class="glyphicon-align-justify glyphicon"></span></div>
                 <div id="logo">
-                    <div style="color: #1b2946;">logo</div>
+                    <a href="home-page.html"><img src="images/ln.png"></a>
                 </div>
+                <div class="mobile-menu">
+                    <div id="btn-addAds">
+                        <a href="add-new-ad.html"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>أضف اعلان</a>
+                    </div>
+                    <div id="btn-singUp">
+                        <a href="log-in.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>تسجيل الدخول</a>
+                    </div>
+                </div>
+
             </div>
         </div>
-
 
         <div class="container">
 
@@ -51,7 +53,7 @@
                     <li class="nav-item">
                         <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>الإعلانات المفضلة</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>إعلاناتي</a>
                     </li>
                 </ul>
@@ -73,34 +75,37 @@
                         </div>
                     </div>
                     <!-- start my ads -->
-                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                        <table id="table-ads">
-                            <thead id="table-head">
-                                <tr>
-                                    <td>
-                                        صورة الإعلان
-                                    </td>
-                                    <td>
-                                        تاريخ الإعلان
-                                    </td>
-                                    <td>
-                                        إسم الإعلان
-                                    </td>
-                                    <td>
-                                        السعر
-                                    </td>
-                                    <td>
+                    <div class="tab-pane fade show active in" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                        <div class="table-responsive" style=" max-height: 550px;
+  overflow: auto;">
+                            <table id="table-ads" class="table table-fixed">
+                                <thead id="table-head">
+                                    <tr>
+                                        <td>
+                                            صورة الإعلان
+                                        </td>
+                                        <td>
+                                            تاريخ الإعلان
+                                        </td>
+                                        <td>
+                                            إسم الإعلان
+                                        </td>
+                                        <td>
+                                            السعر
+                                        </td>
+                                        <td>
 
-                                    </td>
-                                    <td>
+                                        </td>
+                                        <td>
 
-                                    </td>
-                                </tr>
-                            </thead>
-                            <tbody id="ads-table">
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody id="ads-table">
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
                         <!-- modal of  update ads -->
 
                         <div class="modal fade" id="centralModalLg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -118,12 +123,12 @@
                                     <div class="modal-body">
                                         <!-- modal content -->
                                         <div id="box">
-
                                             <div class="form-group">
                                                 <label>إسم الإعلان</label>
                                                 <input type="text" class="form-control" id="ads-name">
+                                                <div class="alert alert-danger custom-alert">برجاء إدخال إسم الإعلان</div>
                                             </div>
-                                            <div class="form-group" id="11">
+                                            <div class="form-group">
                                                 <label>صنف الإعلان</label>
                                                 <select class="form-control" id="ads_category" style="padding: 0px 12px">
                                                     <option>بلاستك</option>
@@ -132,14 +137,17 @@
                                                     <option>كاوتش</option>
                                                     <option>معادن</option>
                                                 </select>
+                                                <div class="alert alert-danger custom-alert">برجاء تحديد صنف الإعلان</div>
                                             </div>
                                             <div class="form-group">
-                                                <label>السعر</label>
+                                                <label>سعر الكيلو / ج.م</label>
                                                 <input type="number" class="form-control" id="ads-price">
+                                                <div class="alert alert-danger custom-alert">برجاء تحديد سعر الإعلان</div>
                                             </div>
-                                            <div class="md-form form-group">
-                                                <label for="form7">أوصف إعلانك</label>
+                                            <div class="md-form">
+                                                <label for="form7">إوصف إعلانك</label>
                                                 <textarea id="ads-describtion" class="md-textarea form-control" rows="3"></textarea>
+                                                <div class="alert alert-danger custom-alert">برجاء وصف الإعلان</div>
                                             </div>
                                             <div class="form-group">
                                                 <label>المدينة</label>
@@ -148,18 +156,22 @@
                                                     <option>الإسكندرية</option>
                                                     <option>طنطا</option>
                                                 </select>
+                                                <div class="alert alert-danger custom-alert">برجاء تحديد المدينة</div>
                                             </div>
                                             <div class="form-group">
-                                                <label>الأسم</label>
+                                                <label>الإسم</label>
                                                 <input type="text" class="form-control" id="ads-personName" placeholder="">
+                                                <div class="alert alert-danger custom-alert">برجاء إدخال إسم المعلن</div>
                                             </div>
                                             <div class="form-group">
                                                 <label>رقم الموبايل</label>
                                                 <input type="number" class="form-control" id="ads-phoneNumber" placeholder="">
+                                                <div class="alert alert-danger custom-alert">برجاء إدخال رقم الموبايل</div>
                                             </div>
                                             <div class="form-group">
                                                 <label>إيميل المعلن</label>
                                                 <input type="email" class="form-control" id="ads-email" placeholder="">
+                                                <div class="alert alert-danger custom-alert">برجاء إدخال الإيميل</div>
                                             </div>
                                         </div>
                                     </div>
@@ -177,11 +189,29 @@
                 </div>
             </div>
         </div>
-        <div id="footer">
+        <div id="footer" class="container-fluid" style="background-color: #121c31; width: 100%;margin-top: 30px">
             <div class="container" id="logo-container">
-                <a>logo</a>
-                <a>تواصل معنا</a>
-                <a>الشروط و الأحكام</a>
+
+                <a href="home-page.html" style="color: #defbff;
+                text-decoration: none;
+                cursor: pointer;
+                margin-top: -14px;
+                          height: 110px;
+                display: inline-block;
+                margin-left: 30px;">
+                    <img src="images/lf.png" style="max-height: 100%"></a>
+
+                <a id="contact-us">
+                    تواصل معنا</a>
+
+                <a id="terms" style="color: #defbff;
+                text-decoration: none;
+                cursor: pointer;
+                margin-top: 30px;
+                display: inline-block;
+                margin-left: 30px;">
+                    الشروط و الأحكام</a>
+
             </div>
         </div>
     </div>
@@ -230,34 +260,6 @@
         </div>
     </div>
     <!-- end modal -->
-
-    <!-- modal delet button-->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-        Launch demo modal
-    </button>
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document" id="modal-delet-btn">
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h2 class="modal-title" id="exampleModalLongTitle" style="    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: .005em;">تأكيد الحذف</h2>
-                </div>
-                <div class="modal-body">
-                    <h4>هل تريد حذف الإعلان؟</h4>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn delet-ads" data-dismiss="modal">حذف</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">إلغاء</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end of modal delet button -->
 
     <script src="js/query.js"></script>
     <script src="js/bootstrap.min.js"></script>
