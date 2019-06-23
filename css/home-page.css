@@ -11,7 +11,7 @@
 /* hide scroll side */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
--webkit-appearance: none;
+    -webkit-appearance: none;
     margin: 0;
 }
 
@@ -43,9 +43,11 @@ body {}
     height: 130px;
     margin-top: -23px;
 }
-#logo img{
+
+#logo img {
     max-height: 100%;
 }
+
 #navbar {
     background-image: url(../images/nav-bg.png);
     background-color: #defbff;
@@ -273,14 +275,15 @@ table tr {
 /* end ads box part */
 
 /* footer */
-#contact-us{
+#contact-us {
     color: #defbff;
-                text-decoration: none;
-                cursor: pointer;
-                margin-top: 30px;
-                display: inline-block;
-                margin-left: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 30px;
+    display: inline-block;
+    margin-left: 30px;
 }
+
 /* start maodal style */
 .modal-body {
     color: #1b2946;
@@ -388,8 +391,8 @@ table tr {
     padding-right: 3px;
 }
 
-#modal_ads_price img{
-        max-height: 100%;
+#modal_ads_price img {
+    max-height: 100%;
     height: 23px;
     margin-left: 5px;
     margin-top: -3px;
@@ -436,8 +439,8 @@ table tr {
 @media only screen and (max-width:767px) {
 
     #navbar {
-           background-position: 73% 106%;
-    background-size: 100vh;
+        background-position: 73% 25%;
+        background-size: 100vh;
     }
 
     #btn-search a,
@@ -451,7 +454,8 @@ table tr {
         display: flex;
         flex-direction: column-reverse;
     }
-    #search-part h1{
+
+    #search-part h1 {
         margin: 0 20px
     }
 
@@ -470,10 +474,10 @@ table tr {
     }
 
     #logo {
-    max-width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    float: left;
+        max-width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        float: left;
     }
 
     #dash-mneu {
@@ -499,13 +503,13 @@ table tr {
 
     .mobile-menu {
         display: none;
-           height: 140px;
-    width: 100%;
-    flex-flow: column;
-    background-color: #1b2946;
-    top: 80px;
-    position: absolute;
-    z-index: 1;
+        height: 140px;
+        width: 100%;
+        flex-flow: column;
+        background-color: #1b2946;
+        top: 80px;
+        position: absolute;
+        z-index: 1;
     }
 
     .mobile-menu div a {
@@ -569,22 +573,25 @@ table tr {
     #centralModalLg {
         padding-top: 15px;
     }
-    
+
     /* footer */
-    #logo-container{
+    #logo-container {
         text-align: center
     }
-    #logo-container a{
+
+    #logo-container a {
         width: 100%;
     }
-    #logo-container #contact-us{
+
+    #logo-container #contact-us {
         margin-top: 0px;
     }
-    #logo-container #terms{
+
+    #logo-container #terms {
         margin-bottom: 20px
     }
- 
-    
+
+
 }
 
 /* tablet*/
@@ -596,9 +603,9 @@ table tr {
     .box .data {
         width: 70%;
     }
-    
-    #navbar{
-            background-position: 80% 0;
+
+    #navbar {
+        background-position: 80% 0;
 
     }
 }
