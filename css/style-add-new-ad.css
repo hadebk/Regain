@@ -1,7 +1,7 @@
 * {
     font-family: 'Cairo', 'Open Sans', sans-serif;
 }
- 
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -61,18 +61,19 @@ input {
     height: 130px;
     margin-top: -23px;
 }
-#logo img{
+
+#logo img {
     max-height: 100%;
 }
 
 /* footer */
-#contact-us{
+#contact-us {
     color: #defbff;
-                text-decoration: none;
-                cursor: pointer;
-                margin-top: 30px;
-                display: inline-block;
-                margin-left: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 30px;
+    display: inline-block;
+    margin-left: 30px;
 }
 
 .form-group {
@@ -80,7 +81,7 @@ input {
 }
 
 #title {
-        color: #1b2946;
+    color: #1b2946;
     font-size: 25px;
     text-align: center;
     background-color: #9dd22c;
@@ -175,15 +176,16 @@ input {
     display: inline;
     margin-left: 10px;
 }
+
 /* about inputs validation */
-label:after{
-  content:"*";
-  font-weight:bold;
-  color: red;
+label:after {
+    content: "*";
+    font-weight: bold;
+    color: red;
     margin-right: 3px;
 }
 
-.custom-alert{
+.custom-alert {
     padding: 5px 10px;
     margin-top: 3px;
     display: none;
@@ -201,27 +203,31 @@ label:after{
     #title {
         width: 100%
     }
+
     #logo {
-       max-width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    float: right;
+        max-width: 100%;
+        float: right;
+        position: absolute;
     }
-    .form-box1{
+
+    .form-box1 {
         margin: 0 15px
     }
-    
+
     /* footer */
-    #logo-container{
+    #logo-container {
         text-align: center
     }
-    #logo-container a{
+
+    #logo-container a {
         width: 100%;
     }
-    #logo-container #contact-us{
+
+    #logo-container #contact-us {
         margin-top: 0px;
     }
-    #logo-container #terms{
+
+    #logo-container #terms {
         margin-bottom: 20px
     }
 
