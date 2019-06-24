@@ -439,8 +439,8 @@ table tr {
 @media only screen and (max-width:767px) {
 
     #navbar {
-        background-size: 100vh;
-        height: 202px;
+        background-size: 120vh;
+        height: 184px;
     }
 
     #btn-search a,
