@@ -31,7 +31,8 @@ body {}
     height: 130px;
     margin-top: -23px;
 }
-#logo img{
+
+#logo img {
     max-height: 100%;
 }
 
@@ -61,7 +62,9 @@ body {}
     color: ;
 }
 
-#navbar .glyphicon, #box-titel .glyphicon, #pills-home #ads-table .glyphicon{
+#navbar .glyphicon,
+#box-titel .glyphicon,
+#pills-home #ads-table .glyphicon {
     top: 2px;
     left: 5px;
     font-size: 17px;
@@ -120,29 +123,31 @@ body {}
     color: #1b2946
 }
 
-#pills-home{
+#pills-home {
     overflow: auto;
 }
 
-#pills-home table thead{
+#pills-home table thead {
     z-index: 11
-    
 }
-#pills-home table thead tr td{
+
+#pills-home table thead tr td {
     text-align: center;
     padding: 10px 0;
-        font-size: 16px;
+    font-size: 16px;
     font-weight: bold;
 }
-#pills-home table tbody tr td{
+
+#pills-home table tbody tr td {
     border-bottom: 1px solid white;
     vertical-align: middle;
     text-align: center;
     font-size: 15px;
     color: #1b2946;
 }
-#pills-home #table-head{
-        background-color: #1b2946;
+
+#pills-home #table-head {
+    background-color: #1b2946;
     color: #ffffff;
 }
 
@@ -261,6 +266,7 @@ body {}
     top: 50%;
     transition: all .5s ease-in-out;
 }
+
 .box .image .glyphicon-star {
     position: absolute;
     font-size: 27px;
@@ -268,7 +274,8 @@ body {}
     color: #3fc3c7;
     -webkit-text-stroke: 1px #555;
 
-} 
+}
+
 .box .data {
     width: 75%;
     background-color: white;
@@ -337,7 +344,8 @@ hr {
     background-color: #9dd22c;
     color: #1b2946;
 }
-.box .image .btn-delet-fav button span{
+
+.box .image .btn-delet-fav button span {
     top: 0;
     left: 0;
 }
@@ -416,27 +424,27 @@ hr {
 /* end modal-delet-btn */
 
 /* about inputs validation */
-label:after{
-  content:"*";
-  font-weight:bold;
-  color: red;
+label:after {
+    content: "*";
+    font-weight: bold;
+    color: red;
     margin-right: 3px;
 }
 
-.custom-alert{
+.custom-alert {
     padding: 5px 10px;
     margin-top: 3px;
     display: none;
 }
 
 /*   start footer style */
-#contact-us{
+#contact-us {
     color: #defbff;
-                text-decoration: none;
-                cursor: pointer;
-                margin-top: 30px;
-                display: inline-block;
-                margin-left: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 30px;
+    display: inline-block;
+    margin-left: 30px;
 }
 
 /***********************************************************************/
@@ -578,6 +586,7 @@ label:after{
 #dash-mneu {
     display: none
 }
+
 /********************************* (responsive design) **************************************/
 /* mobile */
 @media only screen and (max-width:767px) {
@@ -588,10 +597,8 @@ label:after{
     }
 
     #logo {
-       max-width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    float: left;
+        max-width: 100%;
+        float: left;
     }
 
     #dash-mneu {
@@ -614,15 +621,15 @@ label:after{
 
     .mobile-menu {
         display: none;
-           height: 140px;
-    width: 100%;
-    flex-flow: column;
-    background-color: #1b2946;
-    top: 80px;
-    position: absolute;
-    z-index: 1;
+        height: 140px;
+        width: 100%;
+        flex-flow: column;
+        background-color: #1b2946;
+        top: 80px;
+        position: absolute;
+        z-index: 1;
     }
-    
+
 
     .mobile-menu div a {
         width: 160px;
@@ -696,23 +703,27 @@ label:after{
     #centralModalLg-fav {
         padding-top: 15px;
     }
-    
+
     #navbar #dash-mneu .glyphicon {
         font-size: 24px;
     }
+
     /* footer */
-    #logo-container{
+    #logo-container {
         text-align: center
     }
-    #logo-container a{
+
+    #logo-container a {
         width: 100%;
     }
-    #logo-container #contact-us{
+
+    #logo-container #contact-us {
         margin-top: 0px;
     }
-    #logo-container #terms{
+
+    #logo-container #terms {
         margin-bottom: 20px
     }
-    
+
 
 }
