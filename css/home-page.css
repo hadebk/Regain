@@ -303,6 +303,11 @@ table tr {
     margin-left: 30px;
 }
 
+.contact-us-email:hover, .contact-us-phone:hover{
+  color: #defbff;
+  text-decoration: none;
+}
+
 /* start maodal style */
 .modal-body {
     color: #1b2946;

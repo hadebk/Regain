@@ -474,6 +474,11 @@ label:after {
     margin-left: 30px;
 }
 
+.contact-us-email:hover, .contact-us-phone:hover{
+  color: #defbff;
+  text-decoration: none;
+}
+
 /***********************************************************************/
 /* start maodal style in fav */
 .modal-body {
