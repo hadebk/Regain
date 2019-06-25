@@ -67,7 +67,16 @@ input {
 }
 
 /* footer */
-#contact-us {
+.contact-us-email {
+    color: #defbff;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 30px;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.contact-us-phone {
     color: #defbff;
     text-decoration: none;
     cursor: pointer;
@@ -231,7 +240,7 @@ label:after {
         width: 100%;
     }
 
-    #logo-container #contact-us {
+    #logo-container .contact-us-email {
         margin-top: 0px;
     }
 

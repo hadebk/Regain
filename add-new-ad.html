@@ -2,142 +2,142 @@
 <html dir="rtl">
 
 <head>
-    <title>add new ad</title>
-    <!------------->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>add new ad</title>
+  <!------------->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <!--[if lt IE 9]>-->
-    <script src="js/html5shiv.min.js"></script>
-    <script src="js/respond.min.js"></script>
-    <!------------->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style-add-new-ad.css">
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"></script>
+  <!--[if lt IE 9]>-->
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <!------------->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style-add-new-ad.css">
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"></script>
 
 </head>
 
 <body>
 
-    <!--  start main div -->
-    <div class="" id="main-div">
-        <div id="navbar">
-            <div class="container">
-                <div id="btn-singUp">
-                    <a href="log-in.html">تسجيل الدخول</a>
-                </div>
-                <div id="logo">
-                    <a href="home-page.html"><img src="images/ln.png"></a>
-                </div>
-            </div>
+  <!--  start main div -->
+  <div class="" id="main-div">
+    <div id="navbar">
+      <div class="container">
+        <div id="btn-singUp">
+          <a href="log-in.html">تسجيل الدخول</a>
         </div>
-        <div class="form-box1">
-            <div id="title">أضف إعلان</div>
-            <div id="box" class="container">
-                <div class="form-group">
-                    <label>إسم الإعلان</label>
-                    <input type="text" class="form-control" id="ads-name">
-                    <div class="alert alert-danger custom-alert">برجاء إدخال إسم الإعلان</div>
-                </div>
-                <div class="form-group">
-                    <label>صنف الإعلان</label>
-                    <select class="form-control" id="ads_category" style="padding: 0px 12px">
-                        <option>بلاستك</option>
-                        <option>زجاج</option>
-                        <option>ورقيات</option>
-                        <option>كاوتش</option>
-                        <option>معادن</option>
-                    </select>
-                    <div class="alert alert-danger custom-alert">برجاء تحديد صنف الإعلان</div>
-                </div>
-                <div class="form-group">
-                    <label>سعر الكيلو / ج.م</label>
-                    <input type="number" class="form-control" id="ads-price">
-                    <div class="alert alert-danger custom-alert">برجاء تحديد سعر الإعلان</div>
-                </div>
-                <div class="md-form">
-                    <label for="form7">إوصف إعلانك</label>
-                    <textarea id="ads-describtion" class="md-textarea form-control" rows="3"></textarea>
-                    <div class="alert alert-danger custom-alert">برجاء وصف الإعلان</div>
-                </div>
-                <div class="form-group" style="margin-top: 15px">
-                    <label>أضف صورة لإعلانك</label>
-                    <div class="input-group" style="margin-top: 10px">
-                        <span class="input-group-btn">
-                            <span class="btn btn-default btn-file" id="img-box">
-                                <img id="img-upload" />
-                                <input type="file" id="imgInp" accept="image/x-png,image/gif,image/jpeg">
-                            </span>
-                        </span>
-                    </div>
-                    <div class="alert alert-danger custom-alert">برجاء إدخال صورة للإعلان</div>
-                </div>
-                <div class="form-group">
-                    <label>المدينة</label>
-                    <select class="form-control" id="ads-city" style="padding: 0px 12px">
-                        <option>القاهرة</option>
-                        <option>الإسكندرية</option>
-                        <option>طنطا</option>
-                    </select>
-                    <div class="alert alert-danger custom-alert">برجاء تحديد المدينة</div>
-                </div>
-                <div class="form-group">
-                    <label>الإسم</label>
-                    <input type="text" class="form-control" id="ads-personName" placeholder="">
-                    <div class="alert alert-danger custom-alert">برجاء إدخال إسم المعلن</div>
-                </div>
-                <div class="form-group">
-                    <label>رقم الموبايل</label>
-                    <input type="number" class="form-control" id="ads-phoneNumber" placeholder="">
-                    <div class="alert alert-danger custom-alert">برجاء إدخال رقم الموبايل</div>
-                </div>
-                <div class="form-group">
-                    <label>إيميل المعلن</label>
-                    <input type="email" class="form-control" id="ads-email" placeholder="">
-                    <div class="alert alert-danger custom-alert">برجاء إدخال الإيميل</div>
-                </div>
-                <button type="submit" class="btn btn-primary" id="btn-post">أنشر الإعلان</button>
-            </div>
+        <div id="logo">
+          <a href="home-page.html"><img src="images/ln.png"></a>
         </div>
-       <div id="footer" class="container-fluid" style="background-color: #121c31; width: 100%;margin-top: 30px">
-            <div class="container" id="logo-container">
+      </div>
+    </div>
+    <div class="form-box1">
+      <div id="title">أضف إعلان</div>
+      <div id="box" class="container">
+        <div class="form-group">
+          <label>إسم الإعلان</label>
+          <input type="text" class="form-control" id="ads-name">
+          <div class="alert alert-danger custom-alert">برجاء إدخال إسم الإعلان</div>
+        </div>
+        <div class="form-group">
+          <label>صنف الإعلان</label>
+          <select class="form-control" id="ads_category" style="padding: 0px 12px">
+            <option>بلاستك</option>
+            <option>زجاج</option>
+            <option>ورقيات</option>
+            <option>كاوتش</option>
+            <option>معادن</option>
+          </select>
+          <div class="alert alert-danger custom-alert">برجاء تحديد صنف الإعلان</div>
+        </div>
+        <div class="form-group">
+          <label>سعر الكيلو / ج.م</label>
+          <input type="number" class="form-control" id="ads-price">
+          <div class="alert alert-danger custom-alert">برجاء تحديد سعر الإعلان</div>
+        </div>
+        <div class="md-form">
+          <label for="form7">إوصف إعلانك</label>
+          <textarea id="ads-describtion" class="md-textarea form-control" rows="3"></textarea>
+          <div class="alert alert-danger custom-alert">برجاء وصف الإعلان</div>
+        </div>
+        <div class="form-group" style="margin-top: 15px">
+          <label>أضف صورة لإعلانك</label>
+          <div class="input-group" style="margin-top: 10px">
+            <span class="input-group-btn">
+              <span class="btn btn-default btn-file" id="img-box">
+                <img id="img-upload" />
+                <input type="file" id="imgInp" accept="image/x-png,image/gif,image/jpeg">
+              </span>
+            </span>
+          </div>
+          <div class="alert alert-danger custom-alert">برجاء إدخال صورة للإعلان</div>
+        </div>
+        <div class="form-group">
+          <label>المدينة</label>
+          <select class="form-control" id="ads-city" style="padding: 0px 12px">
+            <option>القاهرة</option>
+            <option>الإسكندرية</option>
+            <option>طنطا</option>
+          </select>
+          <div class="alert alert-danger custom-alert">برجاء تحديد المدينة</div>
+        </div>
+        <div class="form-group">
+          <label>الإسم</label>
+          <input type="text" class="form-control" id="ads-personName" placeholder="">
+          <div class="alert alert-danger custom-alert">برجاء إدخال إسم المعلن</div>
+        </div>
+        <div class="form-group">
+          <label>رقم الموبايل</label>
+          <input type="number" class="form-control" id="ads-phoneNumber" placeholder="">
+          <div class="alert alert-danger custom-alert">برجاء إدخال رقم الموبايل</div>
+        </div>
+        <div class="form-group">
+          <label>إيميل المعلن</label>
+          <input type="email" class="form-control" id="ads-email" placeholder="">
+          <div class="alert alert-danger custom-alert">برجاء إدخال الإيميل</div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="btn-post">أنشر الإعلان</button>
+      </div>
+    </div>
+    <div id="footer" class="container-fluid" style="background-color: #121c31; width: 100%;margin-top: 30px">
+      <div class="container" id="logo-container">
 
-                <a href="home-page.html" style="color: #defbff;
+        <a href="home-page.html" style="color: #defbff;
                 text-decoration: none;
                 cursor: pointer;
                 margin-top: -14px;
                           height: 110px;
                 display: inline-block;
                 margin-left: 30px;">
-                    <img src="images/lf.png" style="max-height: 100%"></a>
+          <img src="images/lf.png" style="max-height: 100%"></a>
 
-                <a id="contact-us">
-                    تواصل معنا</a>
+        <a class="contact-us-email">info@regain.com</a>
+        <a class="contact-us-phone">111 111 11 111 02+</a>
 
-                <a id="terms" style="color: #defbff;
+        <a id="terms" style="color: #defbff;
                 text-decoration: none;
                 cursor: pointer;
                 margin-top: 30px;
                 display: inline-block;
-                margin-left: 30px;">
-                    الشروط و الأحكام</a>
+                margin-left: 30px;" href="terms.html">
+          الشروط و الأحكام</a>
 
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- end main div -->
+  <!-- end main div -->
 
-    <script src="js/query.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/script%20-addNewAds.js"></script>
+  <script src="js/query.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script%20-addNewAds.js"></script>
 </body>
 
 </html>
