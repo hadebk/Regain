@@ -1,4 +1,4 @@
-$(document).ready(function () { 
+$(document).ready(function () {
     var key;
     (function () {
 
@@ -108,7 +108,7 @@ $(document).ready(function () {
             }
         });
         // ads photo input
-        $("#imgInp").blur(function () {
+        $("#imgInp").change(function () {
             if ($("#imgInp").val() == "") {
                 v_adsPhoto = true;
                 $(this).parent().css("border", "1px solid #f00");
