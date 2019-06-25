@@ -375,6 +375,15 @@ table tr {
 
 }
 
+.modal-footer #modal_phone a,.modal-footer #modal_email a{
+    color:#1b2946;
+    text-decoration: underline;
+}
+
+.modal-footer #modal_phone a:hover,.modal-footer #modal_email a:hover{
+    color:#fff;
+}
+
 #modal_ads_price {
     float: left;
     clear: left;

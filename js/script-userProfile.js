@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    // fixed thead in table 
+    // fixed thead in table
     'use strict'
     window.onload = function () {
         var tableCont = document.querySelector('.table-responsive');
@@ -375,7 +375,7 @@ $(document).ready(function () {
                 firebase.database().ref("favoritesAsd/" + uid).orderByKey().on('value', function (snapshot) {
                     if (snapshot.exists()) {
                         var content = '';
-                        //get key of ads that has been faviorated 
+                        //get key of ads that has been faviorated
                         snapshot.forEach(function (data) {
                             keys.push(data.val().keyOfAds)
                         });
@@ -525,8 +525,8 @@ $(document).ready(function () {
                                 $("#modal_ads_poster_name").html("<strong>اسم المعلن : </strong>" + personNameOfAds);
                                 $("#modal_ads_location").html("<strong>المدينة : </strong>" + cityOfAds);
                                 $("#modal_ads_data").html("<strong>تاريخ الإعلان : </strong>" + dateAds);
-                                $("#modal_phone").html(phoneOfAds + "<span class='glyphicon glyphicon-earphone' aria-hidden='true'></span>");
-                                $("#modal_email").html(emailOfAds + "<span class='glyphicon glyphicon-envelope' aria-hidden='true'></span>");
+                                $("#modal_phone").html('<a href="tel:' + phoneOfAds + '">' + phoneOfAds + '</a>' + "<span class='glyphicon glyphicon-earphone' aria-hidden='true'></span>");
+                                $("#modal_email").html('<a href="mailto:' + emailOfAds + '" target="_blank" title="أرسل إيميل للمعلن">' + emailOfAds + '</a>' + "<span class='glyphicon glyphicon-envelope' aria-hidden='true'></span>");
 
                                 console.log("done!");
 
@@ -534,7 +534,7 @@ $(document).ready(function () {
                             } else { // snapshot not exist
                                 console.log("no data")
                             }
-                        }); // end of db query 
+                        }); // end of db query
 
                     }); // end of click event
 
