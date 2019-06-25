@@ -115,6 +115,10 @@ input {
     margin-bottom: 30px;
 }
 
+#btn-post:hover{
+  background-color:  #77BD0D;
+}
+
 #btn-post {
     margin-top: 0;
     margin-bottom: 5px;
@@ -128,6 +132,10 @@ input {
     padding: 2px 15px;
     border-radius: 5px;
     font-size: 18px;
+}
+
+#btn-singUp a:hover{
+  background-color: #39afb2;
 }
 
 /* ------------------------------------- */

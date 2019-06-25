@@ -79,6 +79,10 @@
     margin-top: 30px;
     display: block;
 }
+
+#btn-signup:hover{
+  background-color: #77BD0D;
+}
 .custom-alert{
     padding: 5px 10px;
     margin-top: 3px;
@@ -88,7 +92,7 @@
 /*************** responsive design ******************/
 /* mobile */
 @media only screen and (max-width:767px){
-    
+
     #body-box div{
     width: 100%;
 }
@@ -100,6 +104,5 @@
     justify-content: center;
     }
 
-    
-}
 
+}

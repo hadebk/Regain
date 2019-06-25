@@ -91,6 +91,11 @@ body {}
     font-size: 18px;
 }
 
+#btn-singUp a:hover,#btn-search a:hover,#btn-filter a:hover{
+  cursor: pointer;
+  background-color: #39afb2
+}
+
 #btn-search a {
     width: 86px;
     text-align: center;
@@ -98,6 +103,11 @@ body {}
 
 #btn-addAds a {
     background-color: #9dd22c;
+}
+
+#btn-addAds a:hover{
+  cursor: pointer;
+  background-color: #77BD0D;
 }
 
 /*   start search-part style */

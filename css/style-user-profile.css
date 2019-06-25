@@ -83,8 +83,18 @@ body {}
     font-size: 18px;
 }
 
+#btn-singUp a:hover{
+  cursor: pointer;
+  background-color: #39afb2
+}
+
 #btn-addAds a {
     background-color: #defbff;
+}
+
+#btn-addAds a:hover{
+  cursor: pointer;
+  background-color: #cfeaee;
 }
 
 #box-of-ads {
@@ -168,6 +178,10 @@ body {}
     color: #1b2946;
 }
 
+.btn-showAdsToUpdate:hover, .btn-delet:hover{
+    background-color: #77BD0D;
+}
+
 .ads_image {
     width: 100px;
     height: 100px;
@@ -198,6 +212,10 @@ body {}
     height: 35px;
     background-color: #9dd22c;
     color: #1b2946;
+}
+
+#centralModalLg #btn-update:hover, #centralModalLg .btn-secondary:hover{
+    background-color: #77BD0D;
 }
 
 #pills-home .modal-header {
