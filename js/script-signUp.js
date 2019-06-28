@@ -89,29 +89,32 @@
         if (!nameError && !emailError && !passError && !passError2) {
             // sign up
             const cons = auth.createUserWithEmailAndPassword(email, pass);
+            cons.then(function(){
+              $.notify(":) تم إنشاء الحساب بنجاح", "success");
+              window.open('home-page.html')
+              //real tmie auth
+              auth.onAuthStateChanged(firebaseUser => {
+                  if (firebaseUser) {
+                      // User is signed in.
+                      firebaseUser.updateProfile({ // <-- Update Method here
+                          displayName: username.value
+                      }).then(function () {
+                          var displayName = firebaseUser.displayName;
+                          console.log("name " + displayName);
+                      }, function (error) {
+                          console.log(error.message);
+                          console.log(error.code);
+                      });
+
+                  } else {
+                      // User is signed out.
+                      console.log("not log in");
+                  }
+              });
+            });
             cons.catch(e => console.log(e.message));
             cons.catch(e => console.log(e.code));
-            cons.catch(e => $.notify(":) تم إنشاء الحساب بنجاح", "success"));
-
-            //real tmie auth
-            auth.onAuthStateChanged(firebaseUser => {
-                if (firebaseUser) {
-                    // User is signed in.
-                    firebaseUser.updateProfile({ // <-- Update Method here
-                        displayName: username.value
-                    }).then(function () {
-                        var displayName = firebaseUser.displayName;
-                        console.log("name " + displayName);
-                    }, function (error) {
-                        console.log(error.message);
-                        console.log(error.code);
-                    });
-                    window.open('home-page.html');
-                } else {
-                    // User is signed out.
-                    console.log("not log in");
-                }
-            });
+            cons.catch(e => $.notify("تم إستخدام هذا الإيميل من قبل, قم بإدخال إيميل إخر.", "error"));
         } else {
             console.log("ops");
 
