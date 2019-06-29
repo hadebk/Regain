@@ -26,6 +26,7 @@
     right: 0;
     position: absolute;
     z-index: -1;
+    height: 754px;
 }
 
 #navbar {
@@ -38,8 +39,8 @@
     float: right;
     font-size: 20px;
     max-width: 50%;
-    height: 130px;
-    margin-top: -23px;
+    height: 200px;
+    margin-top: -55px;
 }
 #logo img{
     max-height: 100%;

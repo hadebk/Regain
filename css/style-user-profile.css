@@ -1,4 +1,3 @@
-/* defbff */
 * {
     font-family: 'Cairo', 'Open Sans', sans-serif;
 }
@@ -28,12 +27,15 @@ body {}
     float: right;
     font-size: 20px;
     max-width: 50%;
-    height: 130px;
-    margin-top: -23px;
+    height: 200px;
+    margin-top: -55px;
+    margin-right: -35px;
+    position: absolute;
 }
 
 #logo img {
     max-height: 100%;
+        margin-right: 15px;
 }
 
 #navbar {
@@ -83,18 +85,18 @@ body {}
     font-size: 18px;
 }
 
-#btn-singUp a:hover{
-  cursor: pointer;
-  background-color: #39afb2
+#btn-singUp a:hover {
+    cursor: pointer;
+    background-color: #39afb2
 }
 
 #btn-addAds a {
     background-color: #defbff;
 }
 
-#btn-addAds a:hover{
-  cursor: pointer;
-  background-color: #cfeaee;
+#btn-addAds a:hover {
+    cursor: pointer;
+    background-color: #cfeaee;
 }
 
 #box-of-ads {
@@ -178,7 +180,8 @@ body {}
     color: #1b2946;
 }
 
-.btn-showAdsToUpdate:hover, .btn-delet:hover{
+.btn-showAdsToUpdate:hover,
+.btn-delet:hover {
     background-color: #77BD0D;
 }
 
@@ -214,12 +217,13 @@ body {}
     color: #1b2946;
 }
 
-#centralModalLg #btn-update:hover, #centralModalLg .btn-secondary:hover{
+#centralModalLg #btn-update:hover,
+#centralModalLg .btn-secondary:hover {
     background-color: #77BD0D;
 }
 
-#box .md-form{
-  margin-bottom: 15px;
+#box .md-form {
+    margin-bottom: 15px;
 }
 
 #pills-home .modal-header {
@@ -478,9 +482,10 @@ label:after {
     margin-left: 30px;
 }
 
-.contact-us-email:hover, .contact-us-phone:hover{
-  color: #defbff;
-  text-decoration: none;
+.contact-us-email:hover,
+.contact-us-phone:hover {
+    color: #defbff;
+    text-decoration: none;
 }
 
 /***********************************************************************/
@@ -574,13 +579,15 @@ label:after {
 
 }
 
-.modal-footer #modal_phone a,.modal-footer #modal_email a{
-    color:#1b2946;
+.modal-footer #modal_phone a,
+.modal-footer #modal_email a {
+    color: #1b2946;
     text-decoration: underline;
 }
 
-.modal-footer #modal_phone a:hover,.modal-footer #modal_email a:hover{
-    color:#fff;
+.modal-footer #modal_phone a:hover,
+.modal-footer #modal_email a:hover {
+    color: #fff;
 }
 
 #modal_ads_price {
@@ -649,11 +656,9 @@ label:after {
     }
 
     #dash-mneu {
-        width: 10%;
-        margin-top: 18px;
-        float: right;
-        padding-right: 15px;
-        display: block;
+    margin-top: 18px;
+    float: left;
+    display: block;
     }
 
     #dash-mneu span {
@@ -661,7 +666,7 @@ label:after {
         margin-left: 10px;
         font-size: 24px;
         height: 51px;
-        color: #9dd22c;
+        color: #defbff;
         padding: 13px 14px 0px 14px;
         border-radius: 5px;
     }

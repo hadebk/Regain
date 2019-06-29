@@ -40,8 +40,9 @@ body {}
     float: right;
     font-size: 20px;
     max-width: 50%;
-    height: 130px;
-    margin-top: -23px;
+    height: 210px;
+    margin-top: -58px;
+    margin-right: -40px;
 }
 
 #logo img {
@@ -507,13 +508,14 @@ table tr {
 
     #logo {
         max-width: 100%;
-        float: left;
+        float: right;
+        margin-right: -30px;
+        
     }
 
     #dash-mneu {
         margin-top: 18px;
-        float: right;
-        padding-right: 15px;
+        float: left;
         display: block;
     }
 
