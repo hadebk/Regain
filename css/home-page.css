@@ -252,6 +252,10 @@ table tr {
     width: 75%;
 }
 
+.box .data p{
+  color: #777;
+}
+
 .box .data .ads-date,
 .box .data .ads-location {
     font-weight: bold
@@ -264,6 +268,7 @@ table tr {
     overflow: hidden;
     width: 50%;
     font-weight: bold;
+        font-size: 20px;
 }
 
 .box .data h4 {
@@ -394,7 +399,6 @@ table tr {
     margin: 1%;
     border-radius: 5px;
     text-align: left;
-    font-size: 15px;
     font-weight: bold;
 
 }
@@ -402,6 +406,7 @@ table tr {
 .modal-footer #modal_phone a,.modal-footer #modal_email a{
     color:#1b2946;
     text-decoration: underline;
+        font-size: 16px;
 }
 
 .modal-footer #modal_phone a:hover,.modal-footer #modal_email a:hover{

@@ -519,7 +519,7 @@ $(document).ready(function () {
                                 // set data to inputs in modal
                                 $('#modal_ads_image').attr('src', imgOfAds);
                                 $("#modal_ads_name").html(nameOfAds);
-                                $("#modal_ads_price").html(priceOfAds + " " + "ج.م" + " / كجم ");
+                                $("#modal_ads_price").html(priceOfAds + " " + "ج/كجم");
                                 $("#modal_ads_category").html("<strong>الصنف : </strong>" + categoryOfAds);
                                 $("#modal_ads_disc").html("<strong>الوصف : </strong>" + descOfAds);
                                 $("#modal_ads_poster_name").html("<strong>اسم المعلن : </strong>" + personNameOfAds);

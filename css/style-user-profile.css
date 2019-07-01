@@ -308,6 +308,10 @@ body {}
     background-color: white;
 }
 
+.box .data p{
+  color: #777;
+}
+
 .box .data .right,
 .box .data .right p {
     display: inline;
@@ -328,6 +332,8 @@ body {}
     height: 30px;
     overflow: hidden;
     width: 50%;
+    font-weight: bold;
+font-size: 20px;
 }
 
 .box .data h4 {
@@ -581,6 +587,7 @@ label:after {
 .modal-footer #modal_email a {
     color: #1b2946;
     text-decoration: underline;
+    font-size: 16px
 }
 
 .modal-footer #modal_phone a:hover,
