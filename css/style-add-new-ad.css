@@ -1,5 +1,6 @@
+@import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 * {
-    font-family: 'Cairo', 'Open Sans', sans-serif;
+    font-family: 'Droid Arabic Kufi','Cairo', 'HelveticaNeueLTArabic', 'Open Sans', 'sans-serif';
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -60,6 +61,7 @@ input {
     max-width: 50%;
     height: 200px;
     margin-top: -55px;
+    margin-right: -40px;
     position: absolute;
 }
 

@@ -1,6 +1,6 @@
+@import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 * {
-    font-family: 'Cairo', 'Open Sans', sans-serif;
-
+    font-family: 'Droid Arabic Kufi','Cairo', 'HelveticaNeueLTArabic', 'Open Sans', 'sans-serif';
 }
 
 .container-fluid {
@@ -39,8 +39,8 @@
     float: right;
     font-size: 20px;
     max-width: 50%;
-    height: 130px;
-    margin-top: -23px;
+    height: 200px;
+    margin-top: -55px;
 }
 #logo img{
     max-height: 100%;

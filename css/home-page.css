@@ -1,10 +1,10 @@
-/* defbff */
+@import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 * {
-    font-family: 'Cairo', 'HelveticaNeueLTArabic', 'Open Sans', sans-serif;
+    font-family: 'Droid Arabic Kufi','Cairo', 'HelveticaNeueLTArabic', 'Open Sans', 'sans-serif';
 }
 
 @font-face {
-    font-family: HelveticaNeueLTArabic;
+    font-family: "HelveticaNeueLTArabic";
     src: url(../ARGFX.CO_HelveticaNeueLTArabic/HelveticaNeueLTArabic-Roman_0.TTF);
 }
 
@@ -260,9 +260,10 @@ table tr {
 .box .data h3 {
     float: right;
     margin: 13px 10px 0 0;
-    height: 30px;
+    height: 29px;
     overflow: hidden;
     width: 50%;
+    font-weight: bold;
 }
 
 .box .data h4 {
@@ -271,7 +272,7 @@ table tr {
     margin: 13px 0 0 10px;
     font-weight: bolder;
     font-size: 20px;
-    font-family: sans-serif
+    font-family: sans-serif;
 }
 
 .box .data p {
@@ -373,12 +374,10 @@ table tr {
 }
 
 #modal_buttom_data {
-    display: flex;
+
 }
 
 #modal_buttom_data p {
-    flex-wrap: wrap;
-    margin-left: 40px;
     margin-bottom: 0;
     margin-top: 10px;
     font-size: 15px;
@@ -510,7 +509,7 @@ table tr {
         max-width: 100%;
         float: right;
         margin-right: -30px;
-        
+
     }
 
     #dash-mneu {

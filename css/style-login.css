@@ -1,7 +1,7 @@
+@import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 * {
-    font-family: 'Cairo', 'Open Sans', sans-serif;
-
-} 
+    font-family: 'Droid Arabic Kufi','Cairo', 'HelveticaNeueLTArabic', 'Open Sans', 'sans-serif';
+}
 
 .container-fluid {
     padding-left: 0;
