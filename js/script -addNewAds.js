@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    var key;
-    (function () {
+    var key; 
+    (function () { 
 
         // Your web app's Firebase configuration
         var firebaseConfig = {
@@ -258,7 +258,7 @@ $(document).ready(function () {
     }());
 
     //////////////////////////////////
-    // read imaeg file that was added
+    // read imaeg file 
     $(document).on('change', '.btn-file :file', function () {
         input = $(this),
             label = input.val().replace(/\\/g, '/').replace(/.*\//, '');

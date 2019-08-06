@@ -115,7 +115,7 @@ $(document).ready(function () {
         // retrive all ads and show it in table
         function diplay_all_data() {
             db.ref("ads").orderByKey().on('value', function (snapshot) {
-                if (snapshot.exists()) {
+                if (snapshot.exists()) { 
                     var content = '';
                     //go through each item found and print out the emails
                     snapshot.forEach(function (data) {

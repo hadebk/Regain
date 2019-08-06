@@ -304,9 +304,6 @@ $(document).ready(function () {
                                                     }
                                                 }
 
-
-
-
                                             }); //end of add event
 
                                         } else { // snapshot not exist
@@ -318,7 +315,7 @@ $(document).ready(function () {
                                     console.log("not log in");
                                 }
                             }); // end of onAuthStateChanged()
-                        }); // end of click event
+                        }); // end of update button click event
 
                         // delet ads function
                         $(".btn-delet").click(function () {
