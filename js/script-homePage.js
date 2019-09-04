@@ -1208,14 +1208,14 @@ $(document).ready(function () {
         $("#dash-mneu").click(function () {
             if ($(this).attr('data-click-state') == 1) {
                 $(this).attr('data-click-state', 0)
-                $(".mobile-menu").css("display", "none");
-                $(".mobile-menu").fadeOut(400);
+                $(".mobile-menu").slideUp("slow");
+                //$(".mobile-menu").css("display", "none");
                 $("#dash-mneu span").removeClass("glyphicon glyphicon-remove glyphicon")
                 $("#dash-mneu span").addClass("glyphicon-align-justify glyphicon")
             } else {
                 $(this).attr('data-click-state', 1);
+                $(".mobile-menu").slideDown("slow");
                 $(".mobile-menu").css("display", "flex");
-                $(".mobile-menu").fadeIn(400);
                 $("#dash-mneu span").removeClass("glyphicon-align-justify")
                 $("#dash-mneu span").addClass("glyphicon glyphicon-remove")
             }
