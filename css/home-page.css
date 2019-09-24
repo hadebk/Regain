@@ -264,11 +264,11 @@ table tr {
 .box .data h3 {
     float: right;
     margin: 13px 10px 0 0;
-    height: 29px;
+    height: 2px;
     overflow: hidden;
     width: 50%;
     font-weight: bold;
-        font-size: 20px;
+    font-size: 20px;
 }
 
 .box .data h4 {
