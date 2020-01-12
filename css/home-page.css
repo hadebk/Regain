@@ -405,8 +405,7 @@ table tr {
 
 .modal-footer #modal_phone a,.modal-footer #modal_email a{
     color:#1b2946;
-    text-decoration: underline;
-        font-size: 16px;
+    font-size: 16px;
 }
 
 .modal-footer #modal_phone a:hover,.modal-footer #modal_email a:hover{
@@ -437,13 +436,13 @@ table tr {
 }
 
 #modal_phone {
-    background-color: #3fc3c7;
+    background-color: #999;
     color: #1b2946;
 
 }
 
 #modal_email {
-    background-color: #9dd22c;
+    background-color: #999;
     color: #1b2946;
 }
 
@@ -454,7 +453,7 @@ table tr {
     margin-right: 15px;
     font-size: 17px;
     font-weight: bolder;
-    color: white;
+    color: #1b2946;
 }
 
 #modal_data_box hr {
